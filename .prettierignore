@@ -1,0 +1,6 @@
+dist
+dev-dist
+node_modules
+public/hanzi
+package-lock.json
+SPEC_App_Hoc_Tieng_Trung_PWA.md

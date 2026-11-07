@@ -1,0 +1,38 @@
+# CLAUDE.md — Quy ước dự án Nǐ Hǎo Mỗi Ngày
+
+## Nguồn sự thật
+- Đặc tả: SPEC_App_Hoc_Tieng_Trung_PWA.md. Nếu có mâu thuẫn, hỏi lại thay vì tự đoán.
+
+## Lệnh
+- dev: `npm run dev` · test: `npm run test` · e2e: `npm run test:e2e`
+- lint: `npm run lint` · build: `npm run build` · kiểm tra nội dung: `npm run validate:content`
+- copy dữ liệu nét chữ: `npm run hanzi:copy` (tự chạy trong `prebuild`) · tạo icon: `npm run icons`
+
+## Quy tắc code
+- TypeScript strict, không dùng `any`. Types đặt trong `src/types`.
+- Logic nghiệp vụ (SRS, XP, sinh bài tập, chấm điểm) là **hàm thuần** trong `src/engine`, phải có unit test.
+- Component không truy cập Dexie trực tiếp — đi qua `src/db/repositories.ts` hoặc hooks.
+- Mọi chuỗi hiển thị bằng tiếng Việt; gom vào `src/i18n/vi.ts`.
+- Không gọi mạng lúc chạy. Không thêm thư viện mới nếu chưa giải thích lý do.
+- Mobile-first, vùng chạm ≥ 48px, tôn trọng `prefers-reduced-motion`.
+- Pinyin luôn hiển thị qua component `<Pinyin>` để tô màu thanh điệu nhất quán.
+
+## Nội dung
+- Nội dung bài học là JSON trong `src/content`, phải pass `validate:content`.
+- Mỗi bài ≤ 6 mục mới, recap ≤ 3 keyPoints.
+- Kiểm tra kỹ pinyin, thanh điệu, nghĩa và âm Hán-Việt; nếu không chắc âm Hán-Việt thì bỏ trống trường `hanViet` thay vì đoán.
+
+## Dữ liệu người dùng
+- Chỉ IndexedDB (Dexie). Đổi schema → tăng version + migration, không bao giờ xóa dữ liệu cũ.
+- Ghi kết quả cuối bài trong một transaction.
+
+## Quyết định kỹ thuật đã chốt (bổ sung so với SPEC)
+- Router: `HashRouter` để deploy được ở mọi static host (kể cả GitHub Pages đường dẫn con).
+- Chương 0 dùng item `kind: "syllable"` (file `src/content/syllables.json`), SRS thẻ `syllable:<id>:listen`.
+- Dữ liệu nét chữ copy vào `public/hanzi/<mã-unicode-hex>.json` (VD `597d.json` cho 好) để tránh tên file Unicode.
+- Font Noto Sans SC: chỉ precache các lát (slice) chứa chữ dùng trong khóa học; lát khác cache khi chạy.
+- `sharp` (devDependency) chỉ dùng để sinh icon PNG từ SVG lúc phát triển.
+- Bài tập `speak` cần bật trong Cài đặt vì Chrome nhận dạng giọng nói qua mạng.
+
+## Hoàn thành một milestone khi
+- lint + test + build đều pass, tiêu chí nghiệm thu trong SPEC đạt, đã commit.

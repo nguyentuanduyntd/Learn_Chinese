@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — kênh RGB để Tailwind dùng được độ trong suốt (bg-primary/20) */
+:root {
+  --bg: 255 249 242; /* #FFF9F2 giấy dó ấm */
+  --surface: 255 255 255; /* #FFFFFF */
+  --surface-2: 250 240 228;
+  --line: 236 223 208;
+  --primary: 230 57 70; /* #E63946 đỏ đèn lồng */
+  --primary-dark: 184 37 50;
+  --accent: 244 162 97; /* #F4A261 vàng cam */
+  --accent-dark: 214 128 62;
+  --success: 42 157 143; /* #2A9D8F */
+  --success-dark: 29 118 107;
+  --error: 231 111 81; /* #E76F51 */
+  --error-dark: 196 84 56;
+  --text: 43 33 24; /* #2B2118 */
+  --muted: 120 104 89; /* đậm hơn #8C7B6B một chút để đạt tương phản 4.5:1 trên nền sáng */
+  --tone-1: #e63946;
+  --tone-2: #f4a261;
+  --tone-3: #2a9d8f;
+  --tone-4: #457b9d;
+  --tone-5: #8c7b6b;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: 23 19 15; /* #17130F */
+  --surface: 35 29 24; /* #231D18 */
+  --surface-2: 47 39 33;
+  --line: 64 54 46;
+  --primary: 255 90 102; /* #FF5A66 */
+  --primary-dark: 196 52 64;
+  --accent: 246 178 122; /* #F6B27A */
+  --accent-dark: 200 132 76;
+  --success: 60 194 177; /* #3CC2B1 */
+  --success-dark: 34 140 127;
+  --error: 240 138 112; /* #F08A70 */
+  --error-dark: 190 96 72;
+  --text: 243 236 228; /* #F3ECE4 */
+  --muted: 168 152 136; /* #A89888 */
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-bg font-sans text-text antialiased;
+  margin: 0;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.font-han {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--accent));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
