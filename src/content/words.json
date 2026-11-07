@@ -1,0 +1,151 @@
+[
+  {
+    "id": "w_nihao",
+    "hanzi": "你好",
+    "syllables": [
+      { "hanzi": "你", "pinyin": "nǐ", "tone": 3, "spokenTone": 2 },
+      { "hanzi": "好", "pinyin": "hǎo", "tone": 3 }
+    ],
+    "meaning": "xin chào",
+    "hanViet": "nễ hảo",
+    "pos": "cụm từ",
+    "example": { "zh": "老师，你好！", "pinyin": "Lǎo shī, nǐ hǎo!", "vi": "Em chào thầy/cô ạ!" },
+    "note": "Hai thanh 3 đi liền nhau: thanh 3 đầu đọc thành thanh 2 → ní hǎo",
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_ni",
+    "hanzi": "你",
+    "syllables": [{ "hanzi": "你", "pinyin": "nǐ", "tone": 3 }],
+    "meaning": "bạn, anh, chị… (ngôi thứ hai)",
+    "hanViet": "nễ",
+    "pos": "đại từ",
+    "example": { "zh": "你好！", "pinyin": "Nǐ hǎo!", "vi": "Chào bạn!" },
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_hao",
+    "hanzi": "好",
+    "syllables": [{ "hanzi": "好", "pinyin": "hǎo", "tone": 3 }],
+    "meaning": "tốt, khỏe",
+    "hanViet": "hảo",
+    "pos": "tính từ",
+    "example": { "zh": "老师好！", "pinyin": "Lǎo shī hǎo!", "vi": "Em chào thầy/cô ạ!" },
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_laoshi",
+    "hanzi": "老师",
+    "syllables": [
+      { "hanzi": "老", "pinyin": "lǎo", "tone": 3 },
+      { "hanzi": "师", "pinyin": "shī", "tone": 1 }
+    ],
+    "meaning": "thầy giáo, cô giáo",
+    "hanViet": "lão sư",
+    "pos": "danh từ",
+    "example": {
+      "zh": "老师，再见！",
+      "pinyin": "Lǎo shī, zài jiàn!",
+      "vi": "Tạm biệt thầy/cô ạ!"
+    },
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_nimenhao",
+    "hanzi": "你们好",
+    "syllables": [
+      { "hanzi": "你", "pinyin": "nǐ", "tone": 3 },
+      { "hanzi": "们", "pinyin": "men", "tone": 5 },
+      { "hanzi": "好", "pinyin": "hǎo", "tone": 3 }
+    ],
+    "meaning": "chào các bạn (chào nhiều người)",
+    "hanViet": "nễ môn hảo",
+    "pos": "cụm từ",
+    "example": { "zh": "你们好！", "pinyin": "Nǐ men hǎo!", "vi": "Chào các bạn!" },
+    "note": "Thêm 们 (men) sau 你 để chỉ số nhiều: 你们 = các bạn.",
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_xiexie",
+    "hanzi": "谢谢",
+    "syllables": [
+      { "hanzi": "谢", "pinyin": "xiè", "tone": 4 },
+      { "hanzi": "谢", "pinyin": "xie", "tone": 5 }
+    ],
+    "meaning": "cảm ơn",
+    "hanViet": "tạ tạ",
+    "pos": "động từ",
+    "example": { "zh": "谢谢你！", "pinyin": "Xiè xie nǐ!", "vi": "Cảm ơn bạn!" },
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_bukeqi",
+    "hanzi": "不客气",
+    "syllables": [
+      { "hanzi": "不", "pinyin": "bù", "tone": 4, "spokenTone": 2 },
+      { "hanzi": "客", "pinyin": "kè", "tone": 4 },
+      { "hanzi": "气", "pinyin": "qi", "tone": 5 }
+    ],
+    "meaning": "không có gì (đáp lại lời cảm ơn)",
+    "hanViet": "bất khách khí",
+    "pos": "cụm từ",
+    "example": {
+      "zh": "谢谢！——不客气！",
+      "pinyin": "Xiè xie! — Bù kè qi!",
+      "vi": "Cảm ơn! — Không có gì!"
+    },
+    "note": "不 đứng trước thanh 4 (客 kè) đọc thành thanh 2 → bú kè qi",
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_zaijian",
+    "hanzi": "再见",
+    "syllables": [
+      { "hanzi": "再", "pinyin": "zài", "tone": 4 },
+      { "hanzi": "见", "pinyin": "jiàn", "tone": 4 }
+    ],
+    "meaning": "tạm biệt, hẹn gặp lại",
+    "hanViet": "tái kiến",
+    "pos": "cụm từ",
+    "example": { "zh": "谢谢，再见！", "pinyin": "Xiè xie, zài jiàn!", "vi": "Cảm ơn, tạm biệt!" },
+    "note": "再 = lại, 见 = gặp → hẹn gặp lại.",
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_duibuqi",
+    "hanzi": "对不起",
+    "syllables": [
+      { "hanzi": "对", "pinyin": "duì", "tone": 4 },
+      { "hanzi": "不", "pinyin": "bu", "tone": 5 },
+      { "hanzi": "起", "pinyin": "qǐ", "tone": 3 }
+    ],
+    "meaning": "xin lỗi",
+    "hanViet": "đối bất khởi",
+    "pos": "cụm từ",
+    "example": {
+      "zh": "对不起，老师！",
+      "pinyin": "Duì bu qǐ, lǎo shī!",
+      "vi": "Em xin lỗi thầy/cô ạ!"
+    },
+    "note": "不 ở giữa đọc nhẹ, không nhấn: duì bu qǐ.",
+    "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_meiguanxi",
+    "hanzi": "没关系",
+    "syllables": [
+      { "hanzi": "没", "pinyin": "méi", "tone": 2 },
+      { "hanzi": "关", "pinyin": "guān", "tone": 1 },
+      { "hanzi": "系", "pinyin": "xi", "tone": 5 }
+    ],
+    "meaning": "không sao (đáp lại lời xin lỗi)",
+    "hanViet": "một quan hệ",
+    "pos": "cụm từ",
+    "example": {
+      "zh": "对不起！——没关系！",
+      "pinyin": "Duì bu qǐ! — Méi guān xi!",
+      "vi": "Xin lỗi! — Không sao đâu!"
+    },
+    "tags": ["hsk1", "chao-hoi"]
+  }
+]

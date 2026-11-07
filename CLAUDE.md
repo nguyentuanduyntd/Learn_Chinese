@@ -44,3 +44,11 @@
 - Chưa có file dữ liệu ngữ pháp (grammar): mọi tham chiếu `kind: "grammar"` trong bài sẽ bị `validate:content` báo thiếu.
 - Chữ đa âm 了/的/得: pinyin-pro có thể đọc sai khi đứng riêng (VD 了 → liǎo) → cần danh sách ngoại lệ trong `validate:content` khi làm Chương 1–2.
 - M0 chưa đủ: `src/main.tsx` + `src/App.tsx` mới là khung tối thiểu để build pass (chưa import font); `public/icons/` trống và `scripts/generate-icons.ts` chưa có, trong khi `index.html` trỏ tới `favicon.svg`, `apple-touch-icon.png`.
+
+## Decisions pending review
+Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong thì chuyển lên mục "Quyết định kỹ thuật đã chốt" hoặc xóa.
+- **Pinyin câu dùng thanh gốc** (`"Bù kè qi!"`, không viết `"Bú kè qi!"`): biến điệu 不/一/thanh 3 chỉ ghi ở `spokenTone` + `note` của từ — giống cách SPEC ghi `nǐ hǎo` cho 你好. Lý do: một quy ước duy nhất, khớp từ điển, `validate:content` không báo cảnh báo giả.
+- **Thanh nhẹ theo cách đọc phổ biến trong giáo trình**: 不客气 `qi`, 对不起 `bu`, 没关系 `xi`, 谢谢 `xie` (từ điển pinyin-pro ghi thanh đầy đủ; validator bỏ qua âm tiết thanh nhẹ nên không báo).
+- **words.json Chương 1** = 6 từ ở bảng chương SPEC (你好 谢谢 不客气 再见 对不起 没关系) + 4 từ mà bài mẫu SPEC 12.4 dùng (你 好 老师 你们好). 你好 và 谢谢 chép nguyên từ SPEC 12.2, chỉ thêm `pos` "động từ" cho 谢谢.
+- **`pos` "cụm từ"** cho các câu giao tiếp cố định (再见, 对不起, 不客气, 没关系, 你们好), dù từ điển có thể ghi 再见/对不起 là động từ.
+- **Chưa thêm exception list** cho chữ đa âm: 10 từ Chương 1 không có 了/的/得 và `validate:content` không báo sai chữ nào. Mục Known issues vẫn giữ.

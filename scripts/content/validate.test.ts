@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import type { Lesson, SyllableItem } from '../../src/types/content';
-import { checkPinyinFormat, checkSyllableItem, crossCheckPinyin } from './checks';
+import type { Lesson, SyllableItem, Word } from '../../src/types/content';
+import { checkPinyinFormat, checkSyllableItem, checkWord, crossCheckPinyin } from './checks';
 import { validateContent } from './validate';
 
 const levels = (issues: { level: string }[]) => issues.map((i) => i.level);
@@ -53,6 +53,37 @@ describe('checkSyllableItem', () => {
     expect(levels(checkSyllableItem({ ...base, tone: 2 }))).toEqual(['error']);
     expect(levels(checkSyllableItem({ ...base, final: 'u' }))).toEqual(['error']);
     expect(levels(checkSyllableItem({ ...base, initial: 'x' }))).toEqual(['error']);
+  });
+});
+
+describe('checkWord', () => {
+  const example = { zh: '谢谢！——不客气！', pinyin: 'Xiè xie! — Bù kè qi!', vi: 'Cảm ơn!' };
+  const bukeqi: Word = {
+    id: 'w_bukeqi',
+    hanzi: '不客气',
+    syllables: [
+      { hanzi: '不', pinyin: 'bù', tone: 4, spokenTone: 2 },
+      { hanzi: '客', pinyin: 'kè', tone: 4 },
+      { hanzi: '气', pinyin: 'qi', tone: 5 },
+    ],
+    meaning: 'không có gì',
+    example,
+  };
+
+  it('chấp nhận thanh gốc + spokenTone, thanh nhẹ khác từ điển', () => {
+    expect(checkWord(bukeqi)).toEqual([]);
+  });
+
+  it('báo lỗi chữ Hán ghép sai, tone lệch dấu, ví dụ viết liền', () => {
+    expect(levels(checkWord({ ...bukeqi, hanzi: '不客' }))).toEqual(['error']);
+    const [, ke, qi] = bukeqi.syllables;
+    const wrongTone = {
+      ...bukeqi,
+      syllables: [{ hanzi: '不', pinyin: 'bù', tone: 2 as const }, ke, qi],
+    };
+    expect(levels(checkWord(wrongTone))).toEqual(['error']);
+    const joined = { ...bukeqi, example: { ...example, pinyin: 'Xièxie! — Bù kèqi!' } };
+    expect(levels(checkWord(joined))).toEqual(['error']);
   });
 });
 
