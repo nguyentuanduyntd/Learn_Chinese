@@ -1,0 +1,52 @@
+{
+  "id": "u00-l02",
+  "unitId": "u00",
+  "order": 2,
+  "title": "Thanh mẫu dễ nhầm",
+  "emoji": "👅",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "syllable", "id": "s_zhong1" },
+    { "kind": "syllable", "id": "s_chi1" },
+    { "kind": "syllable", "id": "s_re4" },
+    { "kind": "syllable", "id": "s_qi1" },
+    { "kind": "syllable", "id": "s_cai4" },
+    { "kind": "syllable", "id": "s_pa4" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u00-l02-e1",
+      "type": "pinyin_build",
+      "itemId": "s_qi1",
+      "explain": "七 qī = q + i + thanh 1. q đọc gần 'ch' bật hơi."
+    },
+    {
+      "id": "u00-l02-e2",
+      "type": "listen_choice",
+      "itemId": "s_chi1",
+      "explain": "吃 chī: ch uốn lưỡi và bật hơi."
+    },
+    {
+      "id": "u00-l02-e3",
+      "type": "pinyin_build",
+      "itemId": "s_zhong1",
+      "explain": "中 zhōng = zh + ong + thanh 1."
+    }
+  ],
+  "challenge": {
+    "id": "u00-l02-boss",
+    "type": "pinyin_build",
+    "itemId": "s_cai4",
+    "explain": "菜 cài = c + ai + thanh 4. c đọc như 'ts' bật hơi."
+  },
+  "recap": {
+    "keyPoints": [
+      "zh, ch, sh, r đều uốn lưỡi; zh gần 'tr' tiếng Việt.",
+      "q gần 'ch' bật hơi, c như 'ts' bật hơi — khác q, c tiếng Việt.",
+      "p, q, c, ch bật hơi mạnh: đặt tờ giấy trước miệng sẽ thấy rung."
+    ],
+    "pattern": { "zh": "我怕热。", "pinyin": "Wǒ pà rè.", "vi": "Tôi sợ nóng." },
+    "tip": "Với zh, ch, sh, r: cong đầu lưỡi lên phía vòm miệng."
+  }
+}

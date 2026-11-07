@@ -717,6 +717,7 @@ export const db = new AppDB();
 
 ### 12.1 Quy tắc viết nội dung
 - Pinyin luôn **có dấu** (ǎ, é…); có tiện ích `numToTone("ni3") → "nǐ"` để tác giả gõ nhanh nếu muốn.
+- Pinyin **cách nhau từng âm tiết**, kể cả trong một từ (`"Xiè xie nǐ!"`, không viết `"Xièxie"`) để `<Pinyin>` tô màu đúng từng âm tiết.
 - Mỗi bài ≤ 6 `newItems`, ≤ 3 `keyPoints`, mỗi keyPoint ≤ 80 ký tự.
 - Câu tiếng Việt tự nhiên, thân thiện, xưng "bạn".
 - Script `npm run validate:content` (zod) phải pass trước khi build: kiểm tra id tồn tại, không trùng, pinyin hợp lệ, mỗi `itemId` trong bài đều có trong `words.json`/`hanzi.json`.
@@ -734,7 +735,7 @@ export const db = new AppDB();
     "meaning": "xin chào",
     "hanViet": "nễ hảo",
     "pos": "cụm từ",
-    "example": { "zh": "老师，你好！", "pinyin": "Lǎoshī, nǐ hǎo!", "vi": "Em chào thầy/cô ạ!" },
+    "example": { "zh": "老师，你好！", "pinyin": "Lǎo shī, nǐ hǎo!", "vi": "Em chào thầy/cô ạ!" },
     "note": "Hai thanh 3 đi liền nhau: thanh 3 đầu đọc thành thanh 2 → ní hǎo",
     "tags": ["hsk1", "chao-hoi"]
   },
@@ -747,7 +748,7 @@ export const db = new AppDB();
     ],
     "meaning": "cảm ơn",
     "hanViet": "tạ tạ",
-    "example": { "zh": "谢谢你！", "pinyin": "Xièxie nǐ!", "vi": "Cảm ơn bạn!" },
+    "example": { "zh": "谢谢你！", "pinyin": "Xiè xie nǐ!", "vi": "Cảm ơn bạn!" },
     "tags": ["hsk1", "chao-hoi"]
   },
   {
@@ -759,7 +760,7 @@ export const db = new AppDB();
     ],
     "meaning": "học sinh, sinh viên",
     "hanViet": "học sinh",
-    "example": { "zh": "我是学生。", "pinyin": "Wǒ shì xuésheng.", "vi": "Tôi là học sinh." },
+    "example": { "zh": "我是学生。", "pinyin": "Wǒ shì xué sheng.", "vi": "Tôi là học sinh." },
     "tags": ["hsk1"]
   }
 ]
@@ -826,15 +827,15 @@ export const db = new AppDB();
     "prompt": "Bạn gặp cô giáo ở cổng trường. Chào cô thế nào?",
     "lines": [
       { "speaker": "A", "zh": "你好！", "pinyin": "Nǐ hǎo!", "vi": "Chào em!" },
-      { "speaker": "B", "zh": "老师好！", "pinyin": "Lǎoshī hǎo!", "vi": "Em chào cô ạ!",
+      { "speaker": "B", "zh": "老师好！", "pinyin": "Lǎo shī hǎo!", "vi": "Em chào cô ạ!",
         "choices": ["老师好！", "谢谢！", "再见！"] }
     ]
   },
   "recap": {
     "keyPoints": [
       "你好 nǐ hǎo = xin chào (đọc thành ní hǎo)",
-      "Chào thầy cô: 老师好 lǎoshī hǎo",
-      "Chào nhiều người: 你们好 nǐmen hǎo"
+      "Chào thầy cô: 老师好 lǎo shī hǎo",
+      "Chào nhiều người: 你们好 nǐ men hǎo"
     ],
     "pattern": { "zh": "[Người] + 好！", "pinyin": "… hǎo!", "vi": "Chào [người]!" },
     "tip": "好 = 女 (mẹ) + 子 (con): mẹ bế con, thật tốt!"

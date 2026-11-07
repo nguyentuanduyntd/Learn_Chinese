@@ -49,8 +49,8 @@ export interface SyllableItem {
   id: string; // "s_ma1"
   pinyin: string; // "mā"
   tone: Tone;
-  initial: string; // "m" ("" nếu không có thanh mẫu)
-  final: string; // "a" (dạng không dấu, dùng ü)
+  initial: string; // "m" ("" nếu không có thanh mẫu; y/w tính là thanh mẫu)
+  final: string; // "a" (dạng không dấu, dùng ü: qù → "ü")
   hanzi: string; // chữ đại diện để phát âm: "妈"
   meaning: string; // "mẹ"
   note?: string; // so sánh với âm tiếng Việt

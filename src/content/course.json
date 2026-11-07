@@ -1,0 +1,14 @@
+{
+  "contentVersion": "0.1.0",
+  "units": [
+    {
+      "id": "u00",
+      "order": 0,
+      "title": "Làm quen Pinyin & Thanh điệu",
+      "station": "Điểm xuất phát",
+      "theme": "#F4A261",
+      "emoji": "🎵",
+      "lessonIds": ["u00-l01", "u00-l02", "u00-l03"]
+    }
+  ]
+}

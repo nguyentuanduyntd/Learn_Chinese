@@ -20,6 +20,8 @@
 ## Nội dung
 - Nội dung bài học là JSON trong `src/content`, phải pass `validate:content`.
 - Mỗi bài ≤ 6 mục mới, recap ≤ 3 keyPoints.
+- Pinyin cách nhau **từng âm tiết**, kể cả trong một từ: `"Xiè xie nǐ!"` (không viết `"Xièxie"`).
+- `SyllableItem` (Chương 0): y/w tính là thanh mẫu (`wǒ` → `w` + `o`, `yú` → `y` + `ü`); `final` không dấu và dùng `ü` (`qù` → `q` + `ü`).
 - Kiểm tra kỹ pinyin, thanh điệu, nghĩa và âm Hán-Việt; nếu không chắc âm Hán-Việt thì bỏ trống trường `hanViet` thay vì đoán.
 
 ## Dữ liệu người dùng

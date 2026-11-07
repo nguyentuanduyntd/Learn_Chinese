@@ -1,0 +1,172 @@
+[
+  {
+    "id": "s_ma1",
+    "pinyin": "mā",
+    "tone": 1,
+    "initial": "m",
+    "final": "a",
+    "hanzi": "妈",
+    "meaning": "mẹ",
+    "note": "Thanh 1: cao và ngang, giữ giọng đều như thanh ngang tiếng Việt nhưng cao hơn."
+  },
+  {
+    "id": "s_ma2",
+    "pinyin": "má",
+    "tone": 2,
+    "initial": "m",
+    "final": "a",
+    "hanzi": "麻",
+    "meaning": "tê; cây gai",
+    "note": "Thanh 2: đi lên từ giữa lên cao, gần giống thanh sắc."
+  },
+  {
+    "id": "s_ma3",
+    "pinyin": "mǎ",
+    "tone": 3,
+    "initial": "m",
+    "final": "a",
+    "hanzi": "马",
+    "meaning": "ngựa",
+    "note": "Thanh 3: xuống thấp rồi vòng lên, gần giống thanh hỏi nhưng kéo dài hơn."
+  },
+  {
+    "id": "s_ma4",
+    "pinyin": "mà",
+    "tone": 4,
+    "initial": "m",
+    "final": "a",
+    "hanzi": "骂",
+    "meaning": "mắng",
+    "note": "Thanh 4: rơi mạnh từ cao xuống thấp, dứt khoát như hô khẩu lệnh."
+  },
+  {
+    "id": "s_ma5",
+    "pinyin": "ma",
+    "tone": 5,
+    "initial": "m",
+    "final": "a",
+    "hanzi": "吗",
+    "meaning": "(trợ từ hỏi) …không?",
+    "note": "Thanh nhẹ: đọc ngắn và nhẹ, không nhấn, không có dấu."
+  },
+  {
+    "id": "s_zhong1",
+    "pinyin": "zhōng",
+    "tone": 1,
+    "initial": "zh",
+    "final": "ong",
+    "hanzi": "中",
+    "meaning": "giữa; Trung (Quốc)",
+    "note": "zh: uốn lưỡi, không bật hơi — gần 'tr' tiếng Việt."
+  },
+  {
+    "id": "s_chi1",
+    "pinyin": "chī",
+    "tone": 1,
+    "initial": "ch",
+    "final": "i",
+    "hanzi": "吃",
+    "meaning": "ăn",
+    "note": "ch: uốn lưỡi như zh nhưng bật hơi mạnh — không giống 'ch' tiếng Việt."
+  },
+  {
+    "id": "s_re4",
+    "pinyin": "rè",
+    "tone": 4,
+    "initial": "r",
+    "final": "e",
+    "hanzi": "热",
+    "meaning": "nóng",
+    "note": "r: cong lưỡi như sh nhưng có rung dây thanh, không rung đầu lưỡi như 'r' tiếng Việt."
+  },
+  {
+    "id": "s_qi1",
+    "pinyin": "qī",
+    "tone": 1,
+    "initial": "q",
+    "final": "i",
+    "hanzi": "七",
+    "meaning": "số bảy",
+    "note": "q đọc gần 'ch' bật hơi, không phải 'qu' tiếng Việt."
+  },
+  {
+    "id": "s_cai4",
+    "pinyin": "cài",
+    "tone": 4,
+    "initial": "c",
+    "final": "ai",
+    "hanzi": "菜",
+    "meaning": "rau; món ăn",
+    "note": "c đọc như 'ts' bật hơi, không phải 'c' (k) tiếng Việt."
+  },
+  {
+    "id": "s_pa4",
+    "pinyin": "pà",
+    "tone": 4,
+    "initial": "p",
+    "final": "a",
+    "hanzi": "怕",
+    "meaning": "sợ",
+    "note": "p bật hơi mạnh (đặt tờ giấy trước miệng sẽ thấy rung); b thì không bật hơi."
+  },
+  {
+    "id": "s_nv3",
+    "pinyin": "nǚ",
+    "tone": 3,
+    "initial": "n",
+    "final": "ü",
+    "hanzi": "女",
+    "meaning": "nữ, phụ nữ",
+    "note": "ü: môi tròn như 'u' nhưng lưỡi đặt như 'i' — tiếng Việt không có âm này."
+  },
+  {
+    "id": "s_qu4",
+    "pinyin": "qù",
+    "tone": 4,
+    "initial": "q",
+    "final": "ü",
+    "hanzi": "去",
+    "meaning": "đi",
+    "note": "Sau j, q, x, ü viết thành u (bỏ hai chấm) nhưng vẫn đọc là ü."
+  },
+  {
+    "id": "s_yu2",
+    "pinyin": "yú",
+    "tone": 2,
+    "initial": "y",
+    "final": "ü",
+    "hanzi": "鱼",
+    "meaning": "cá",
+    "note": "Sau y, ü cũng viết thành u: yú đọc là 'ü' thanh 2."
+  },
+  {
+    "id": "s_tian1",
+    "pinyin": "tiān",
+    "tone": 1,
+    "initial": "t",
+    "final": "ian",
+    "hanzi": "天",
+    "meaning": "trời; ngày",
+    "note": "-ian đọc gần 'iên': tiān nghe gần 'thiên' giọng cao."
+  },
+  {
+    "id": "s_xiong2",
+    "pinyin": "xióng",
+    "tone": 2,
+    "initial": "x",
+    "final": "iong",
+    "hanzi": "熊",
+    "meaning": "con gấu",
+    "note": "-iong đọc gần 'i-ung' với môi tròn."
+  },
+  {
+    "id": "s_yue4",
+    "pinyin": "yuè",
+    "tone": 4,
+    "initial": "y",
+    "final": "üe",
+    "hanzi": "月",
+    "meaning": "mặt trăng; tháng",
+    "note": "üe sau y, j, q, x viết là ue, đọc gần 'uê' với môi tròn."
+  }
+]

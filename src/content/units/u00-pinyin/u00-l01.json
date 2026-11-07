@@ -1,0 +1,45 @@
+{
+  "id": "u00-l01",
+  "unitId": "u00",
+  "order": 1,
+  "title": "Bốn thanh điệu",
+  "emoji": "🎵",
+  "estMinutes": 5,
+  "newItems": [
+    { "kind": "syllable", "id": "s_ma1" },
+    { "kind": "syllable", "id": "s_ma2" },
+    { "kind": "syllable", "id": "s_ma3" },
+    { "kind": "syllable", "id": "s_ma4" },
+    { "kind": "syllable", "id": "s_ma5" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u00-l01-e1",
+      "type": "tone_pick",
+      "itemId": "s_ma3",
+      "explain": "马 mǎ là thanh 3: xuống thấp rồi vòng lên."
+    },
+    {
+      "id": "u00-l01-e2",
+      "type": "tone_pick",
+      "itemId": "s_ma4",
+      "explain": "骂 mà là thanh 4: rơi mạnh từ cao xuống thấp."
+    }
+  ],
+  "challenge": {
+    "id": "u00-l01-boss",
+    "type": "listen_choice",
+    "itemId": "s_ma2",
+    "explain": "麻 má là thanh 2: đi lên giống thanh sắc."
+  },
+  "recap": {
+    "keyPoints": [
+      "Có 4 thanh và thanh nhẹ; đổi thanh là đổi nghĩa: mā (mẹ) ≠ mǎ (ngựa).",
+      "Thanh 3 xuống thấp rồi lên; thanh 4 rơi mạnh, dứt khoát.",
+      "Thanh nhẹ đọc ngắn, nhẹ và không có dấu: ma."
+    ],
+    "pattern": { "zh": "妈妈骂马吗？", "pinyin": "Mā ma mà mǎ ma?", "vi": "Mẹ mắng ngựa à?" },
+    "tip": "Màu giúp bạn nhớ thanh: 1 đỏ, 2 cam, 3 xanh lá, 4 xanh dương, nhẹ xám."
+  }
+}
