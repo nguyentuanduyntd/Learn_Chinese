@@ -1,0 +1,56 @@
+{
+  "id": "u01-l01",
+  "unitId": "u01",
+  "order": 1,
+  "title": "Xin chào!",
+  "emoji": "👋",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "word", "id": "w_nihao" },
+    { "kind": "word", "id": "w_ni" },
+    { "kind": "word", "id": "w_hao" },
+    { "kind": "word", "id": "w_laoshi" },
+    { "kind": "word", "id": "w_nimenhao" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u01-l01-e1",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Em chào thầy ạ!\"",
+      "tokens": ["老师", "，", "你好", "！"],
+      "answer": ["老师", "，", "你好", "！"]
+    },
+    {
+      "id": "u01-l01-e2",
+      "type": "tone_pick",
+      "itemId": "w_hao",
+      "explain": "好 hǎo là thanh 3: đi xuống rồi lên."
+    }
+  ],
+  "challenge": {
+    "id": "u01-l01-boss",
+    "type": "dialogue",
+    "prompt": "Bạn gặp cô giáo ở cổng trường. Chào cô thế nào?",
+    "lines": [
+      { "speaker": "A", "zh": "你好！", "pinyin": "Nǐ hǎo!", "vi": "Chào em!" },
+      {
+        "speaker": "B",
+        "zh": "老师好！",
+        "pinyin": "Lǎo shī hǎo!",
+        "vi": "Em chào cô ạ!",
+        "choices": ["老师好！", "谢谢！", "再见！"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "你好 nǐ hǎo = xin chào (đọc thành ní hǎo)",
+      "Chào thầy cô: 老师好 lǎo shī hǎo",
+      "Chào nhiều người: 你们好 nǐ men hǎo"
+    ],
+    "pattern": { "zh": "[Người] + 好！", "pinyin": "… hǎo!", "vi": "Chào [người]!" },
+    "tip": "好 = 女 (mẹ) + 子 (con): mẹ bế con, thật tốt!"
+  },
+  "hanziOfLesson": "好"
+}

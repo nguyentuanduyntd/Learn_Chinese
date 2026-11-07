@@ -100,6 +100,9 @@ export function validateContent(c: ContentBundle): Issue[] {
         issues.push(error(`${l.id} › ${e.id}`, `itemId "${e.itemId}" không tồn tại`));
       }
     }
+    if (l.hanziOfLesson && !items.hanzi.has(l.hanziOfLesson)) {
+      issues.push(error(l.id, `hanziOfLesson "${l.hanziOfLesson}" chưa có trong hanzi.json`));
+    }
   }
 
   // Pinyin

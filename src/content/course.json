@@ -9,6 +9,15 @@
       "theme": "#F4A261",
       "emoji": "🎵",
       "lessonIds": ["u00-l01", "u00-l02", "u00-l03", "u00-l04"]
+    },
+    {
+      "id": "u01",
+      "order": 1,
+      "title": "Chào hỏi",
+      "station": "Bắc Kinh",
+      "theme": "#E63946",
+      "emoji": "🏮",
+      "lessonIds": ["u01-l01"]
     }
   ]
 }

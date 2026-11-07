@@ -124,4 +124,15 @@ describe('validateContent', () => {
     expect(messages).toContain('không có bài "u00-l02"');
     expect(messages).toContain('không có syllable "s_khong_co"');
   });
+
+  it('báo hanziOfLesson chưa có trong hanzi.json', () => {
+    const messages = validateContent({
+      course,
+      lessons: [{ ...lesson, hanziOfLesson: '好' }],
+      syllables: [],
+      words: [],
+      hanzi: [],
+    }).map((i) => i.message);
+    expect(messages).toContain('hanziOfLesson "好" chưa có trong hanzi.json');
+  });
 });

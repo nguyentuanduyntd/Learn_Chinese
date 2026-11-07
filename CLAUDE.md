@@ -52,3 +52,6 @@ Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong
 - **words.json Chương 1** = 6 từ ở bảng chương SPEC (你好 谢谢 不客气 再见 对不起 没关系) + 4 từ mà bài mẫu SPEC 12.4 dùng (你 好 老师 你们好). 你好 và 谢谢 chép nguyên từ SPEC 12.2, chỉ thêm `pos` "động từ" cho 谢谢.
 - **`pos` "cụm từ"** cho các câu giao tiếp cố định (再见, 对不起, 不客气, 没关系, 你们好), dù từ điển có thể ghi 再见/对不起 là động từ.
 - **Chưa thêm exception list** cho chữ đa âm: 10 từ Chương 1 không có 了/的/得 và `validate:content` không báo sai chữ nào. Mục Known issues vẫn giữ.
+- **Bài đầu Chương 1 = u01-l01 "Xin chào!"**, chép nguyên SPEC 12.4. SPEC 12.5 xếp bài Biến điệu vào Chương 0, không phải Chương 1 → bài Biến điệu vẫn chờ (dự kiến `u00-l05`, giờ đã có từ 你好/不客气 để dùng); chưa viết vì không được yêu cầu và Chương 0 đã duyệt.
+- **Tạo `hanzi.json` với đúng 1 chữ 好** (chép nguyên SPEC 12.3) vì u01-l01 có `hanziOfLesson: "好"`; `validate:content` giờ báo lỗi nếu `hanziOfLesson` chưa có trong hanzi.json.
+- **Chương u01**: tiêu đề "Chào hỏi" (bảng chương SPEC), trạm "Bắc Kinh" (SPEC Mục 7), `theme` `#E63946` (đỏ đèn lồng = `--primary`), `emoji` 🏮.

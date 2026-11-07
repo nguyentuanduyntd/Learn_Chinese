@@ -1,0 +1,15 @@
+[
+  {
+    "char": "好",
+    "pinyin": "hǎo",
+    "hanViet": "hảo",
+    "meaning": "tốt, khỏe",
+    "components": [
+      { "char": "女", "meaning": "phụ nữ" },
+      { "char": "子", "meaning": "con" }
+    ],
+    "mnemonic": "Mẹ (女) bế con (子) — thật là TỐT!",
+    "strokes": 6,
+    "similar": ["妈", "她"]
+  }
+]
