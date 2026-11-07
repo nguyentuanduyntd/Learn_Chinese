@@ -35,6 +35,7 @@
 - Font Noto Sans SC: chỉ precache các lát (slice) chứa chữ dùng trong khóa học; lát khác cache khi chạy.
 - `sharp` (devDependency) chỉ dùng để sinh icon PNG từ SVG lúc phát triển.
 - Bài tập `speak` cần bật trong Cài đặt vì Chrome nhận dạng giọng nói qua mạng.
+- `validate:content` đối chiếu pinyin với chữ Hán bằng pinyin-pro (thanh gốc, không biến điệu): lệch số âm tiết/chữ cái → lỗi (chặn build); chỉ lệch thanh → cảnh báo; âm tiết thanh nhẹ không bị báo. Code kiểm tra nằm trong `scripts/content/` — không import vào app (kéo theo từ điển ~150 KB).
 
 ## Hoàn thành một milestone khi
 - lint + test + build đều pass, tiêu chí nghiệm thu trong SPEC đạt, đã commit.

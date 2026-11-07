@@ -29,13 +29,22 @@ export function splitSyllables(text: string): string[] {
 }
 
 /**
- * Lấy pinyin (có dấu) của từng chữ Hán, bỏ qua ký tự không phải chữ Hán.
- * Chỉ dùng để gợi ý / đối chiếu khi soạn nội dung — chữ đa âm có thể sai,
- * pinyin hiển thị cho người học vẫn lấy từ JSON đã kiểm tra.
+ * Lấy pinyin (có dấu, thanh gốc — không biến điệu 不/一) của từng chữ Hán,
+ * bỏ qua ký tự không phải chữ Hán. Chỉ dùng để đối chiếu khi soạn nội dung
+ * (kéo theo từ điển ~150 KB) — chữ đa âm có thể sai, không import vào UI.
  * @example hanziToSyllables('你好！') // ['nǐ', 'hǎo']
+ * @example hanziToSyllables('不是') // ['bù', 'shì']
  */
 export function hanziToSyllables(hanzi: string): string[] {
-  return pinyin(hanzi, { type: 'array', nonZh: 'removed' });
+  return pinyin(hanzi, { type: 'array', nonZh: 'removed', toneSandhi: false });
+}
+
+/**
+ * Bỏ dấu thanh, giữ nguyên ü.
+ * @example removeTone('nǚ hǎo') // 'nü hao'
+ */
+export function removeTone(text: string): string {
+  return convert(text, { format: 'toneNone' });
 }
 
 /**

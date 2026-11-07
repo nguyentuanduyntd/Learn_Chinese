@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { getTone, hanziToSyllables, numToTone, splitInitialFinal, splitSyllables } from './pinyin';
+import {
+  getTone,
+  hanziToSyllables,
+  numToTone,
+  removeTone,
+  splitInitialFinal,
+  splitSyllables,
+} from './pinyin';
 
 describe('numToTone', () => {
   it('đổi dạng số sang dấu thanh', () => {
@@ -28,6 +35,17 @@ describe('splitSyllables', () => {
 describe('hanziToSyllables', () => {
   it('lấy pinyin từng chữ, bỏ dấu câu', () => {
     expect(hanziToSyllables('你好！')).toEqual(['nǐ', 'hǎo']);
+  });
+
+  it('giữ thanh gốc, không biến điệu 不/一', () => {
+    expect(hanziToSyllables('不是')).toEqual(['bù', 'shì']);
+    expect(hanziToSyllables('一个')).toEqual(['yī', 'gè']);
+  });
+});
+
+describe('removeTone', () => {
+  it('bỏ dấu thanh nhưng giữ ü', () => {
+    expect(removeTone('nǚ hǎo')).toBe('nü hao');
   });
 });
 
