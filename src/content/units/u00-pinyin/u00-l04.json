@@ -1,0 +1,51 @@
+{
+  "id": "u00-l04",
+  "unitId": "u00",
+  "order": 4,
+  "title": "Vận mẫu khó: ü, -ian, -iong",
+  "emoji": "👄",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "syllable", "id": "s_nv3" },
+    { "kind": "syllable", "id": "s_qu4" },
+    { "kind": "syllable", "id": "s_yu2" },
+    { "kind": "syllable", "id": "s_tian1" },
+    { "kind": "syllable", "id": "s_xiong2" },
+    { "kind": "syllable", "id": "s_yue4" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u00-l04-e1",
+      "type": "pinyin_build",
+      "itemId": "s_qu4",
+      "explain": "去 qù = q + ü + thanh 4; sau q, ü viết thành u."
+    },
+    {
+      "id": "u00-l04-e2",
+      "type": "pinyin_build",
+      "itemId": "s_yue4",
+      "explain": "月 yuè = y + üe + thanh 4; sau y, üe viết là ue."
+    },
+    {
+      "id": "u00-l04-e3",
+      "type": "tone_pick",
+      "itemId": "s_xiong2",
+      "explain": "熊 xióng là thanh 2: đi lên."
+    }
+  ],
+  "challenge": {
+    "id": "u00-l04-boss",
+    "type": "listen_choice",
+    "itemId": "s_nv3",
+    "explain": "女 nǚ: môi tròn, lưỡi như i; sau n vẫn giữ hai chấm."
+  },
+  "recap": {
+    "keyPoints": [
+      "ü: môi tròn như 'u', lưỡi như 'i' — tiếng Việt không có âm này.",
+      "Sau j, q, x, y, ü viết thành u nhưng vẫn đọc ü: qù, yú.",
+      "-ian đọc gần 'iên': tiān nghe gần 'thiên'."
+    ],
+    "tip": "Hai chấm của ü chỉ giữ khi đứng sau n, l: nǚ, lǜ."
+  }
+}

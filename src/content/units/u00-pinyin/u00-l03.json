@@ -2,50 +2,41 @@
   "id": "u00-l03",
   "unitId": "u00",
   "order": 3,
-  "title": "Vận mẫu khó: ü, -ian, -iong",
-  "emoji": "👄",
-  "estMinutes": 6,
+  "title": "Âm bật hơi: q, c, p",
+  "emoji": "💨",
+  "estMinutes": 4,
   "newItems": [
-    { "kind": "syllable", "id": "s_nv3" },
-    { "kind": "syllable", "id": "s_qu4" },
-    { "kind": "syllable", "id": "s_yu2" },
-    { "kind": "syllable", "id": "s_tian1" },
-    { "kind": "syllable", "id": "s_xiong2" },
-    { "kind": "syllable", "id": "s_yue4" }
+    { "kind": "syllable", "id": "s_qi1" },
+    { "kind": "syllable", "id": "s_cai4" },
+    { "kind": "syllable", "id": "s_pa4" }
   ],
   "autoGenerate": true,
   "exercises": [
     {
       "id": "u00-l03-e1",
       "type": "pinyin_build",
-      "itemId": "s_qu4",
-      "explain": "去 qù = q + ü + thanh 4; sau q, ü viết thành u."
+      "itemId": "s_qi1",
+      "explain": "七 qī = q + i + thanh 1. q đọc gần 'ch' bật hơi."
     },
     {
       "id": "u00-l03-e2",
-      "type": "pinyin_build",
-      "itemId": "s_yue4",
-      "explain": "月 yuè = y + üe + thanh 4; sau y, üe viết là ue."
-    },
-    {
-      "id": "u00-l03-e3",
-      "type": "tone_pick",
-      "itemId": "s_xiong2",
-      "explain": "熊 xióng là thanh 2: đi lên."
+      "type": "listen_choice",
+      "itemId": "s_pa4",
+      "explain": "怕 pà: p bật hơi mạnh, còn b thì không bật hơi."
     }
   ],
   "challenge": {
     "id": "u00-l03-boss",
-    "type": "listen_choice",
-    "itemId": "s_nv3",
-    "explain": "女 nǚ: môi tròn, lưỡi như i; sau n vẫn giữ hai chấm."
+    "type": "pinyin_build",
+    "itemId": "s_cai4",
+    "explain": "菜 cài = c + ai + thanh 4. c đọc như 'ts' bật hơi."
   },
   "recap": {
     "keyPoints": [
-      "ü: môi tròn như 'u', lưỡi như 'i' — tiếng Việt không có âm này.",
-      "Sau j, q, x, y, ü viết thành u nhưng vẫn đọc ü: qù, yú.",
-      "-ian đọc gần 'iên': tiān nghe gần 'thiên'."
+      "q gần 'ch' bật hơi, c như 'ts' bật hơi — khác q, c tiếng Việt.",
+      "p, q, c, ch bật hơi mạnh: đặt tờ giấy trước miệng sẽ thấy rung."
     ],
-    "tip": "Hai chấm của ü chỉ giữ khi đứng sau n, l: nǚ, lǜ."
+    "pattern": { "zh": "我怕热。", "pinyin": "Wǒ pà rè.", "vi": "Tôi sợ nóng." },
+    "tip": "Các cặp chỉ khác nhau ở luồng hơi: b–p, z–c, j–q, zh–ch (âm sau bật hơi)."
   }
 }

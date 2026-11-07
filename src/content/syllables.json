@@ -57,7 +57,7 @@
     "final": "ong",
     "hanzi": "中",
     "meaning": "giữa; Trung (Quốc)",
-    "note": "zh: uốn lưỡi, không bật hơi — gần 'tr' tiếng Việt."
+    "note": "zh: uốn lưỡi, không bật hơi — gần 'tr' giọng miền Nam/Trung. Nếu bạn nói giọng Bắc (tr đọc như ch), hãy tập trung vào động tác cong đầu lưỡi lên vòm miệng."
   },
   {
     "id": "s_chi1",
@@ -70,6 +70,16 @@
     "note": "ch: uốn lưỡi như zh nhưng bật hơi mạnh — không giống 'ch' tiếng Việt."
   },
   {
+    "id": "s_shi4",
+    "pinyin": "shì",
+    "tone": 4,
+    "initial": "sh",
+    "final": "i",
+    "hanzi": "是",
+    "meaning": "là; đúng",
+    "note": "sh: cong đầu lưỡi như zh nhưng để hơi thoát ra liên tục — gần 's' uốn lưỡi (s nặng) trong tiếng Việt."
+  },
+  {
     "id": "s_re4",
     "pinyin": "rè",
     "tone": 4,
@@ -77,7 +87,7 @@
     "final": "e",
     "hanzi": "热",
     "meaning": "nóng",
-    "note": "r: cong lưỡi như sh nhưng có rung dây thanh, không rung đầu lưỡi như 'r' tiếng Việt."
+    "note": "r: cong lưỡi như sh, có rung dây thanh — gần 'r' giọng miền Nam nhưng không rung lưỡi. Khác hẳn 'r' giọng Bắc (đọc như 'd')."
   },
   {
     "id": "s_qi1",
