@@ -39,3 +39,8 @@
 
 ## Hoàn thành một milestone khi
 - lint + test + build đều pass, tiêu chí nghiệm thu trong SPEC đạt, đã commit.
+
+## Known issues / TODO
+- Chưa có file dữ liệu ngữ pháp (grammar): mọi tham chiếu `kind: "grammar"` trong bài sẽ bị `validate:content` báo thiếu.
+- Chữ đa âm 了/的/得: pinyin-pro có thể đọc sai khi đứng riêng (VD 了 → liǎo) → cần danh sách ngoại lệ trong `validate:content` khi làm Chương 1–2.
+- M0 chưa đủ: `src/main.tsx` + `src/App.tsx` mới là khung tối thiểu để build pass (chưa import font); `public/icons/` trống và `scripts/generate-icons.ts` chưa có, trong khi `index.html` trỏ tới `favicon.svg`, `apple-touch-icon.png`.
