@@ -1,0 +1,77 @@
+{
+  "id": "u01-l02",
+  "unitId": "u01",
+  "order": 2,
+  "title": "Cảm ơn & Xin lỗi",
+  "emoji": "🙏",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "word", "id": "w_xiexie" },
+    { "kind": "word", "id": "w_bukeqi" },
+    { "kind": "word", "id": "w_duibuqi" },
+    { "kind": "word", "id": "w_meiguanxi" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u01-l02-e1",
+      "type": "fill_blank",
+      "sentence": "谢谢！——___！",
+      "answer": "不客气",
+      "options": ["不客气", "对不起", "再见", "你好"],
+      "vi": "Cảm ơn! — Không có gì!",
+      "explain": "Được cảm ơn thì đáp 不客气 bù kè qi (không có gì)."
+    },
+    {
+      "id": "u01-l02-e2",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Em xin lỗi thầy/cô ạ!\"",
+      "tokens": ["对不起", "，", "老师", "！"],
+      "answer": ["对不起", "，", "老师", "！"],
+      "vi": "Em xin lỗi thầy/cô ạ!",
+      "pinyin": "Duì bu qǐ, lǎo shī!"
+    },
+    {
+      "id": "u01-l02-e3",
+      "type": "fill_blank",
+      "sentence": "对不起！——___！",
+      "answer": "没关系",
+      "options": ["没关系", "不客气", "谢谢", "再见"],
+      "vi": "Xin lỗi! — Không sao đâu!",
+      "explain": "Được xin lỗi thì đáp 没关系 méi guān xi (không sao)."
+    }
+  ],
+  "challenge": {
+    "id": "u01-l02-boss",
+    "type": "dialogue",
+    "prompt": "Bạn lỡ va vào một bạn cùng lớp, bạn ấy giúp nhặt sách lên. Nói gì cho phải phép?",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "对不起！",
+        "pinyin": "Duì bu qǐ!",
+        "vi": "Xin lỗi nhé!",
+        "choices": ["对不起！", "不客气！", "再见！"]
+      },
+      { "speaker": "B", "zh": "没关系！", "pinyin": "Méi guān xi!", "vi": "Không sao đâu!" },
+      {
+        "speaker": "A",
+        "zh": "谢谢你！",
+        "pinyin": "Xiè xie nǐ!",
+        "vi": "Cảm ơn bạn!",
+        "choices": ["谢谢你！", "你好！", "没关系！"]
+      },
+      { "speaker": "B", "zh": "不客气！", "pinyin": "Bù kè qi!", "vi": "Không có gì!" }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "谢谢 xiè xie = cảm ơn → đáp 不客气 bù kè qi (không có gì).",
+      "对不起 duì bu qǐ = xin lỗi → đáp 没关系 méi guān xi (không sao).",
+      "Âm tiết cuối của 4 từ này đều đọc nhẹ: xie, qi, qǐ giữ thanh, xi."
+    ],
+    "pattern": { "zh": "谢谢你！", "pinyin": "Xiè xie nǐ!", "vi": "Cảm ơn bạn!" },
+    "tip": "谢 tạ như trong 'đa tạ', 'cảm tạ' — người Việt đã quen với chữ này rồi!"
+  },
+  "hanziOfLesson": "人"
+}

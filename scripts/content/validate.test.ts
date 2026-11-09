@@ -1,9 +1,57 @@
 import { describe, expect, it } from 'vitest';
 import type { Lesson, SyllableItem, Word } from '../../src/types/content';
 import { checkPinyinFormat, checkSyllableItem, checkWord, crossCheckPinyin } from './checks';
-import { validateContent } from './validate';
+import { checkExerciseLogic, validateContent } from './validate';
 
 const levels = (issues: { level: string }[]) => issues.map((i) => i.level);
+
+describe('checkExerciseLogic', () => {
+  it('sentence_order: answer phải là hoán vị của tokens, pinyin khớp câu', () => {
+    const ok = {
+      id: 'e',
+      type: 'sentence_order' as const,
+      tokens: ['老师', '，', '你好', '！'],
+      answer: ['老师', '，', '你好', '！'],
+      pinyin: 'Lǎo shī, nǐ hǎo!',
+    };
+    expect(checkExerciseLogic(ok, 'x')).toEqual([]);
+    const badOrder = { ...ok, pinyin: undefined, answer: ['老师', '你好'] };
+    expect(levels(checkExerciseLogic(badOrder, 'x'))).toEqual(['error']);
+    expect(levels(checkExerciseLogic({ ...ok, pinyin: 'Lǎo shī, nǐ hǎi!' }, 'x'))).toEqual([
+      'error',
+    ]);
+  });
+
+  it('fill_blank: cần ___ và answer nằm trong options', () => {
+    const ok = {
+      id: 'e',
+      type: 'fill_blank' as const,
+      sentence: '谢谢！——___！',
+      answer: '不客气',
+      options: ['不客气', '再见'],
+    };
+    expect(checkExerciseLogic(ok, 'x')).toEqual([]);
+    expect(levels(checkExerciseLogic({ ...ok, answer: '没关系' }, 'x'))).toEqual(['error']);
+    expect(levels(checkExerciseLogic({ ...ok, sentence: '谢谢！' }, 'x'))).toEqual(['error']);
+    expect(levels(checkExerciseLogic({ ...ok, options: ['不客气', '不客气'] }, 'x'))).toEqual([
+      'error',
+    ]);
+  });
+
+  it('dialogue: choices phải chứa câu đúng và có ít nhất một lượt chọn', () => {
+    const line = { speaker: 'B' as const, zh: '再见！', pinyin: 'Zài jiàn!', vi: 'Tạm biệt!' };
+    const ok = {
+      id: 'e',
+      type: 'dialogue' as const,
+      lines: [{ ...line, choices: ['再见！', '你好！'] }],
+    };
+    expect(checkExerciseLogic(ok, 'x')).toEqual([]);
+    expect(levels(checkExerciseLogic({ ...ok, lines: [line] }, 'x'))).toEqual(['error']);
+    expect(
+      levels(checkExerciseLogic({ ...ok, lines: [{ ...line, choices: ['你好！'] }] }, 'x')),
+    ).toEqual(['error']);
+  });
+});
 
 describe('checkPinyinFormat', () => {
   it('chấp nhận pinyin có dấu, cách âm tiết', () => {

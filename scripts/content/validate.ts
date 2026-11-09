@@ -11,6 +11,7 @@ import type {
 import {
   checkPair,
   checkPinyinFormat,
+  crossCheckPinyin,
   checkSyllableItem,
   checkWord,
   error,
@@ -115,7 +116,53 @@ export function validateContent(c: ContentBundle): Issue[] {
       const where = `${l.id} › ${e.id}`;
       e.lines?.forEach((line, i) => issues.push(...checkPair(line, `${where} › lines[${i}]`)));
       if (e.pinyin) issues.push(...checkPinyinFormat(e.pinyin, where));
+      issues.push(...checkExerciseLogic(e, where));
     }
+  }
+  return issues;
+}
+
+/** Ràng buộc riêng của từng dạng bài viết tay. */
+export function checkExerciseLogic(e: ExerciseSpec, where: string): Issue[] {
+  const issues: Issue[] = [];
+  switch (e.type) {
+    case 'sentence_order': {
+      if (!e.tokens || !Array.isArray(e.answer)) {
+        return [error(where, 'sentence_order cần tokens và answer (mảng)')];
+      }
+      const sorted = (list: string[]) => [...list].sort().join('\u0000');
+      if (sorted(e.tokens) !== sorted(e.answer)) {
+        issues.push(error(where, 'answer không phải hoán vị của tokens'));
+      }
+      if (e.pinyin) issues.push(...crossCheckPinyin(e.answer.join(''), e.pinyin, where));
+      break;
+    }
+    case 'fill_blank': {
+      if (!e.sentence?.includes('___'))
+        issues.push(error(where, 'fill_blank cần "___" trong sentence'));
+      if (typeof e.answer !== 'string') issues.push(error(where, 'fill_blank cần answer là chuỗi'));
+      else if (e.options && !e.options.includes(e.answer)) {
+        issues.push(error(where, `answer "${e.answer}" không có trong options`));
+      }
+      break;
+    }
+    case 'dialogue': {
+      if (!e.lines?.length) return [error(where, 'dialogue cần lines')];
+      e.lines.forEach((line, i) => {
+        if (line.choices && !line.choices.includes(line.zh)) {
+          issues.push(error(`${where} › lines[${i}]`, `choices không chứa câu đúng "${line.zh}"`));
+        }
+      });
+      if (!e.lines.some((line) => line.choices)) {
+        issues.push(error(where, 'dialogue cần ít nhất một lượt có choices để người học chọn'));
+      }
+      break;
+    }
+    default:
+      break;
+  }
+  if (e.options && new Set(e.options).size !== e.options.length) {
+    issues.push(error(where, 'options có đáp án trùng'));
   }
   return issues;
 }

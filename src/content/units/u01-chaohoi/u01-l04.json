@@ -1,0 +1,68 @@
+{
+  "id": "u01-l04",
+  "unitId": "u01",
+  "order": 4,
+  "title": "Thử thách: Một ngày ở trường",
+  "emoji": "🏆",
+  "estMinutes": 5,
+  "isChallenge": true,
+  "newItems": [],
+  "reviewItems": [
+    { "kind": "word", "id": "w_nihao" },
+    { "kind": "word", "id": "w_laoshi" },
+    { "kind": "word", "id": "w_nimenhao" },
+    { "kind": "word", "id": "w_xiexie" },
+    { "kind": "word", "id": "w_bukeqi" },
+    { "kind": "word", "id": "w_duibuqi" },
+    { "kind": "word", "id": "w_meiguanxi" },
+    { "kind": "word", "id": "w_zaijian" }
+  ],
+  "autoGenerate": true,
+  "challenge": {
+    "id": "u01-l04-boss",
+    "type": "dialogue",
+    "prompt": "Một ngày ở trường: chào cô, mượn bút của bạn rồi ra về. Chọn câu phù hợp ở mỗi lượt.",
+    "lines": [
+      { "speaker": "A", "zh": "你们好！", "pinyin": "Nǐ men hǎo!", "vi": "Chào các em!" },
+      {
+        "speaker": "B",
+        "zh": "老师好！",
+        "pinyin": "Lǎo shī hǎo!",
+        "vi": "Em chào cô ạ!",
+        "choices": ["老师好！", "老师，再见！", "没关系！"]
+      },
+      { "speaker": "A", "zh": "谢谢你！", "pinyin": "Xiè xie nǐ!", "vi": "Cảm ơn cậu nhé!" },
+      {
+        "speaker": "B",
+        "zh": "不客气！",
+        "pinyin": "Bù kè qi!",
+        "vi": "Không có gì!",
+        "choices": ["不客气！", "对不起！", "你好！"]
+      },
+      { "speaker": "A", "zh": "对不起！", "pinyin": "Duì bu qǐ!", "vi": "Xin lỗi nhé!" },
+      {
+        "speaker": "B",
+        "zh": "没关系！",
+        "pinyin": "Méi guān xi!",
+        "vi": "Không sao!",
+        "choices": ["没关系！", "谢谢！", "再见！"]
+      },
+      { "speaker": "A", "zh": "再见！", "pinyin": "Zài jiàn!", "vi": "Tạm biệt!" },
+      {
+        "speaker": "B",
+        "zh": "再见！",
+        "pinyin": "Zài jiàn!",
+        "vi": "Tạm biệt!",
+        "choices": ["再见！", "你好！", "不客气！"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "Chào: 你好 / 老师好 / 你们好 — thêm tên người trước 好.",
+      "Cảm ơn 谢谢 ↔ 不客气; xin lỗi 对不起 ↔ 没关系.",
+      "Chia tay: 再见 — hẹn gặp lại."
+    ],
+    "tip": "Bạn vừa xong Chương 1 — mở Hộp Bí Ẩn để nhận Thẻ Văn Hóa đầu tiên nhé!"
+  }
+}

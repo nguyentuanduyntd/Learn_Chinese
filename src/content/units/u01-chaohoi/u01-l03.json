@@ -1,0 +1,55 @@
+{
+  "id": "u01-l03",
+  "unitId": "u01",
+  "order": 3,
+  "title": "Tạm biệt!",
+  "emoji": "👋",
+  "estMinutes": 4,
+  "newItems": [{ "kind": "word", "id": "w_zaijian" }],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u01-l03-e1",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Tạm biệt thầy/cô ạ!\"",
+      "tokens": ["老师", "，", "再见", "！"],
+      "answer": ["老师", "，", "再见", "！"],
+      "vi": "Tạm biệt thầy/cô ạ!",
+      "pinyin": "Lǎo shī, zài jiàn!"
+    },
+    {
+      "id": "u01-l03-e2",
+      "type": "fill_blank",
+      "sentence": "谢谢，___！",
+      "answer": "再见",
+      "options": ["再见", "你好", "没关系", "不客气"],
+      "vi": "Cảm ơn, tạm biệt!",
+      "explain": "Kết thúc cuộc trò chuyện: 再见 zài jiàn."
+    }
+  ],
+  "challenge": {
+    "id": "u01-l03-boss",
+    "type": "dialogue",
+    "prompt": "Tan học rồi, bạn chào cô giáo ra về.",
+    "lines": [
+      { "speaker": "A", "zh": "再见！", "pinyin": "Zài jiàn!", "vi": "Tạm biệt em!" },
+      {
+        "speaker": "B",
+        "zh": "老师，再见！",
+        "pinyin": "Lǎo shī, zài jiàn!",
+        "vi": "Em chào cô ạ!",
+        "choices": ["老师，再见！", "老师，你好！", "老师，谢谢！"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "再见 zài jiàn = tạm biệt: 再 (lại) + 见 (gặp) → hẹn gặp lại.",
+      "Chào tạm biệt thầy cô: 老师，再见！",
+      "Người kia nói 再见 thì bạn cũng đáp 再见."
+    ],
+    "pattern": { "zh": "[Người]，再见！", "pinyin": "…, zài jiàn!", "vi": "Tạm biệt [người]!" },
+    "tip": "见 kiến — như trong 'ý kiến', 'kiến thức': đều mang nghĩa thấy, gặp."
+  },
+  "hanziOfLesson": "日"
+}
