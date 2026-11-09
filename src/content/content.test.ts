@@ -22,6 +22,8 @@ describe('content index', () => {
     const syllable = getItem('syllable', 's_ma1');
     expect(syllable?.kind === 'syllable' && syllable.item.hanzi).toBe('妈');
     expect(getItem('word', 'khong_co')).toBeUndefined();
+    const grammar = getItem('grammar', 'g_shi');
+    expect(grammar?.kind === 'grammar' && grammar.item.id).toBe('g_shi');
     expect(getItem('grammar', 'g_x')).toBeUndefined();
   });
 });

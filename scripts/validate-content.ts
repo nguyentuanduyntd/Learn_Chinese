@@ -11,6 +11,7 @@ import type { Issue } from './content/checks';
 import {
   courseSchema,
   cultureCardSchema,
+  grammarPointSchema,
   hanziInfoSchema,
   lessonSchema,
   syllableItemSchema,
@@ -61,10 +62,11 @@ const syllables = loadList('syllables.json', syllableItemSchema);
 const words = loadList('words.json', wordSchema);
 const hanzi = loadList('hanzi.json', hanziInfoSchema);
 const culture = loadList('culture.json', cultureCardSchema);
+const grammar = loadList('grammar.json', grammarPointSchema);
 
 // Chỉ kiểm tra sâu khi schema sạch, tránh báo lỗi dây chuyền.
 if (course && issues.length === 0) {
-  issues.push(...validateContent({ course, lessons, syllables, words, hanzi, culture }));
+  issues.push(...validateContent({ course, lessons, syllables, words, hanzi, culture, grammar }));
 }
 
 const errors = issues.filter((i) => i.level === 'error');

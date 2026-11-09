@@ -3,6 +3,7 @@ import type {
   Course,
   CultureCard,
   ExerciseSpec,
+  GrammarPoint,
   HanziInfo,
   ItemKind,
   Lesson,
@@ -26,6 +27,7 @@ export interface ContentBundle {
   words: Word[];
   hanzi: HanziInfo[];
   culture?: CultureCard[];
+  grammar?: GrammarPoint[];
 }
 
 /** Báo các id xuất hiện quá một lần. */
@@ -43,7 +45,7 @@ const exercisesOf = (l: Lesson): ExerciseSpec[] => [
 ];
 
 export function validateContent(c: ContentBundle): Issue[] {
-  const { course, lessons, culture = [] } = c;
+  const { course, lessons, culture = [], grammar = [] } = c;
   const issues: Issue[] = [
     ...findDuplicates(
       course.units.map((u) => u.id),
@@ -73,7 +75,22 @@ export function validateContent(c: ContentBundle): Issue[] {
       culture.map((card) => card.id),
       'culture',
     ),
+    ...findDuplicates(
+      grammar.map((g) => g.id),
+      'grammar',
+    ),
   ];
+
+  // Ngữ pháp: ví dụ khớp pinyin, tokens ghép lại đúng câu
+  for (const g of grammar) {
+    g.examples.forEach((ex, i) => {
+      const where = `grammar › ${g.id} › examples[${i}]`;
+      issues.push(...checkPair(ex, where));
+      if (ex.tokens && ex.tokens.join('') !== ex.zh) {
+        issues.push(error(where, `tokens ghép thành "${ex.tokens.join('')}" khác zh "${ex.zh}"`));
+      }
+    });
+  }
 
   // Thẻ Văn Hóa: pinyin khớp chữ Hán
   for (const card of culture) {
@@ -102,12 +119,12 @@ export function validateContent(c: ContentBundle): Issue[] {
     }
   }
 
-  // Tham chiếu mục học (chưa có dữ liệu ngữ pháp → mọi tham chiếu grammar đều báo thiếu)
+  // Tham chiếu mục học
   const items: Record<ItemKind, Set<string>> = {
     syllable: new Set(c.syllables.map((s) => s.id)),
     word: new Set(c.words.map((w) => w.id)),
     hanzi: new Set(c.hanzi.map((h) => h.char)),
-    grammar: new Set(),
+    grammar: new Set(grammar.map((g) => g.id)),
   };
   const anyItem = (id: string) => Object.values(items).some((set) => set.has(id));
   for (const l of lessons) {

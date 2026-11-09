@@ -70,6 +70,7 @@ describe('checkPinyinFormat', () => {
 describe('crossCheckPinyin', () => {
   it('khớp chữ Hán, bỏ qua thanh nhẹ và chú thích tiếng Việt', () => {
     expect(crossCheckPinyin('谢谢你！', 'Xiè xie nǐ!', 'x')).toEqual([]);
+    expect(crossCheckPinyin('阿南', 'Ā Nán', 'x')).toEqual([]);
     expect(crossCheckPinyin('[Người] + 好！', '… hǎo!', 'x')).toEqual([]);
   });
 

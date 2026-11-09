@@ -7,6 +7,7 @@ import type {
   Course,
   CultureCard,
   ExerciseSpec,
+  GrammarPoint,
   HanziInfo,
   Lesson,
   SyllableItem,
@@ -14,6 +15,18 @@ import type {
 } from '../../src/types/content';
 
 const text = z.string().min(1);
+const tone = z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]);
+const example = z.object({ zh: text, pinyin: text, vi: text }).strict();
+
+export const grammarPointSchema: z.ZodType<GrammarPoint> = z
+  .object({
+    id: text,
+    title: text,
+    pattern: text,
+    explanation: text,
+    examples: z.array(example.extend({ tokens: z.array(text).min(2).optional() }).strict()).min(1),
+  })
+  .strict();
 
 export const cultureCardSchema: z.ZodType<CultureCard> = z
   .object({
@@ -26,8 +39,6 @@ export const cultureCardSchema: z.ZodType<CultureCard> = z
     pinyin: text.optional(),
   })
   .strict();
-const tone = z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]);
-const example = z.object({ zh: text, pinyin: text, vi: text }).strict();
 
 export const syllableItemSchema: z.ZodType<SyllableItem> = z
   .object({

@@ -1,0 +1,72 @@
+{
+  "id": "u02-l02",
+  "unitId": "u02",
+  "order": 2,
+  "title": "Bạn tên là gì?",
+  "emoji": "📛",
+  "estMinutes": 5,
+  "newItems": [
+    { "kind": "word", "id": "w_jiao" },
+    { "kind": "word", "id": "w_mingzi" },
+    { "kind": "word", "id": "w_shenme" },
+    { "kind": "grammar", "id": "g_jiao" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u02-l02-e1",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Bạn tên là gì?\"",
+      "tokens": ["你", "叫", "什么", "名字", "？"],
+      "answer": ["你", "叫", "什么", "名字", "？"],
+      "vi": "Bạn tên là gì?",
+      "pinyin": "Nǐ jiào shén me míng zi?"
+    },
+    {
+      "id": "u02-l02-e2",
+      "type": "fill_blank",
+      "sentence": "我___阿南。",
+      "answer": "叫",
+      "options": ["叫", "是", "什么", "好"],
+      "vi": "Tôi tên là A Nam.",
+      "explain": "Nói tên dùng 叫 jiào: 我叫 + tên."
+    }
+  ],
+  "challenge": {
+    "id": "u02-l02-boss",
+    "type": "dialogue",
+    "prompt": "Bạn mới quen một người bạn Trung Quốc. Hỏi tên và tự giới thiệu nhé.",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好！你叫什么名字？",
+        "pinyin": "Nǐ hǎo! Nǐ jiào shén me míng zi?",
+        "vi": "Chào bạn! Bạn tên là gì?",
+        "choices": ["你好！你叫什么名字？", "你好！你是老师吗？", "谢谢！再见！"]
+      },
+      {
+        "speaker": "B",
+        "zh": "我叫阿南。你呢？",
+        "pinyin": "Wǒ jiào Ā Nán. Nǐ ne?",
+        "vi": "Mình tên A Nam. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我叫小明。",
+        "pinyin": "Wǒ jiào Xiǎo Míng.",
+        "vi": "Mình tên Tiểu Minh.",
+        "choices": ["我叫小明。", "我是小明吗？", "小明不是我。"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "Hỏi tên: 你叫什么名字？ nǐ jiào shén me míng zi?",
+      "Trả lời: 我叫 + tên — 我叫阿南.",
+      "什么 (gì) đứng đúng chỗ của câu trả lời, không đảo lên đầu câu."
+    ],
+    "pattern": { "zh": "我叫阿南。", "pinyin": "Wǒ jiào Ā Nán.", "vi": "Tôi tên là A Nam." },
+    "tip": "你呢？ nǐ ne? = Còn bạn? — cách hỏi lại ngắn gọn, rất hay dùng."
+  },
+  "hanziOfLesson": "大"
+}

@@ -187,5 +187,171 @@
     },
     "note": "是 shì là thanh 4 nên 不 đứng trước đọc thành bú: bú shì.",
     "tags": ["hsk1", "bien-dieu"]
+  },
+  {
+    "id": "w_wo",
+    "hanzi": "我",
+    "syllables": [{ "hanzi": "我", "pinyin": "wǒ", "tone": 3 }],
+    "meaning": "tôi, mình",
+    "hanViet": "ngã",
+    "pos": "đại từ",
+    "example": { "zh": "我是学生。", "pinyin": "Wǒ shì xué sheng.", "vi": "Tôi là học sinh." },
+    "note": "Ngã như trong 'bản ngã' — cái tôi.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_ta_m",
+    "hanzi": "他",
+    "syllables": [{ "hanzi": "他", "pinyin": "tā", "tone": 1 }],
+    "meaning": "anh ấy, ông ấy (nam)",
+    "hanViet": "tha",
+    "pos": "đại từ",
+    "example": { "zh": "他是老师。", "pinyin": "Tā shì lǎo shī.", "vi": "Anh ấy là giáo viên." },
+    "note": "Bộ 亻(người) bên trái. 他 và 她 đọc giống hệt nhau, chỉ khác khi viết.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_ta_f",
+    "hanzi": "她",
+    "syllables": [{ "hanzi": "她", "pinyin": "tā", "tone": 1 }],
+    "meaning": "cô ấy, bà ấy (nữ)",
+    "hanViet": "tha",
+    "pos": "đại từ",
+    "example": { "zh": "她是老师。", "pinyin": "Tā shì lǎo shī.", "vi": "Cô ấy là giáo viên." },
+    "note": "Bộ 女 (nữ) bên trái → chỉ phụ nữ. Đọc y hệt 他.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_shi",
+    "hanzi": "是",
+    "syllables": [{ "hanzi": "是", "pinyin": "shì", "tone": 4 }],
+    "meaning": "là",
+    "hanViet": "thị",
+    "pos": "động từ",
+    "example": {
+      "zh": "我是越南人。",
+      "pinyin": "Wǒ shì Yuè nán rén.",
+      "vi": "Tôi là người Việt Nam."
+    },
+    "note": "Phủ định: 不是 bú shì (không phải là).",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_jiao",
+    "hanzi": "叫",
+    "syllables": [{ "hanzi": "叫", "pinyin": "jiào", "tone": 4 }],
+    "meaning": "tên là; gọi",
+    "hanViet": "khiếu",
+    "pos": "động từ",
+    "example": { "zh": "我叫阿南。", "pinyin": "Wǒ jiào Ā Nán.", "vi": "Tôi tên là A Nam." },
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_mingzi",
+    "hanzi": "名字",
+    "syllables": [
+      { "hanzi": "名", "pinyin": "míng", "tone": 2 },
+      { "hanzi": "字", "pinyin": "zi", "tone": 5 }
+    ],
+    "meaning": "tên",
+    "hanViet": "danh tự",
+    "pos": "danh từ",
+    "example": {
+      "zh": "你叫什么名字？",
+      "pinyin": "Nǐ jiào shén me míng zi?",
+      "vi": "Bạn tên là gì?"
+    },
+    "note": "Danh như 'danh sách', tự như 'chữ' — tên gọi bằng chữ.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_shenme",
+    "hanzi": "什么",
+    "syllables": [
+      { "hanzi": "什", "pinyin": "shén", "tone": 2 },
+      { "hanzi": "么", "pinyin": "me", "tone": 5 }
+    ],
+    "meaning": "gì, cái gì",
+    "pos": "đại từ nghi vấn",
+    "example": { "zh": "这是什么？", "pinyin": "Zhè shì shén me?", "vi": "Đây là cái gì?" },
+    "note": "Từ để hỏi đặt ngay tại vị trí của thứ muốn hỏi, không đảo lên đầu câu.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_ren",
+    "hanzi": "人",
+    "syllables": [{ "hanzi": "人", "pinyin": "rén", "tone": 2 }],
+    "meaning": "người",
+    "hanViet": "nhân",
+    "pos": "danh từ",
+    "example": {
+      "zh": "他是中国人。",
+      "pinyin": "Tā shì Zhōng guó rén.",
+      "vi": "Anh ấy là người Trung Quốc."
+    },
+    "note": "Tên nước + 人 = người nước đó: 越南人, 中国人.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_zhongguo",
+    "hanzi": "中国",
+    "syllables": [
+      { "hanzi": "中", "pinyin": "Zhōng", "tone": 1 },
+      { "hanzi": "国", "pinyin": "guó", "tone": 2 }
+    ],
+    "meaning": "Trung Quốc",
+    "hanViet": "Trung Quốc",
+    "pos": "danh từ riêng",
+    "example": {
+      "zh": "我不是中国人。",
+      "pinyin": "Wǒ bù shì Zhōng guó rén.",
+      "vi": "Tôi không phải người Trung Quốc."
+    },
+    "note": "中 trung (giữa) + 国 quốc (nước) — 'nước ở giữa'.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_yuenan",
+    "hanzi": "越南",
+    "syllables": [
+      { "hanzi": "越", "pinyin": "Yuè", "tone": 4 },
+      { "hanzi": "南", "pinyin": "nán", "tone": 2 }
+    ],
+    "meaning": "Việt Nam",
+    "hanViet": "Việt Nam",
+    "pos": "danh từ riêng",
+    "example": {
+      "zh": "我是越南人。",
+      "pinyin": "Wǒ shì Yuè nán rén.",
+      "vi": "Tôi là người Việt Nam."
+    },
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_ma",
+    "hanzi": "吗",
+    "syllables": [{ "hanzi": "吗", "pinyin": "ma", "tone": 5 }],
+    "meaning": "…không? (trợ từ hỏi cuối câu)",
+    "pos": "trợ từ",
+    "example": {
+      "zh": "你是学生吗？",
+      "pinyin": "Nǐ shì xué sheng ma?",
+      "vi": "Bạn là học sinh à?"
+    },
+    "note": "Thêm 吗 vào cuối câu khẳng định là thành câu hỏi, không cần đổi trật tự.",
+    "tags": ["hsk1", "gioi-thieu"]
+  },
+  {
+    "id": "w_xuesheng",
+    "hanzi": "学生",
+    "syllables": [
+      { "hanzi": "学", "pinyin": "xué", "tone": 2 },
+      { "hanzi": "生", "pinyin": "sheng", "tone": 5 }
+    ],
+    "meaning": "học sinh, sinh viên",
+    "hanViet": "học sinh",
+    "pos": "danh từ",
+    "example": { "zh": "我是学生。", "pinyin": "Wǒ shì xué sheng.", "vi": "Tôi là học sinh." },
+    "tags": ["hsk1", "gioi-thieu"]
   }
 ]

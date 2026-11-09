@@ -40,7 +40,8 @@ export function hanziToSyllables(hanzi: string): string[] {
 }
 
 /**
- * Bỏ dấu thanh, giữ nguyên ü.
+ * Bỏ dấu thanh, giữ nguyên ü. Lưu ý: pinyin-pro không bỏ được dấu trên chữ HOA
+ * (`Ā` giữ nguyên) — hạ chữ thường trước nếu cần so sánh.
  * @example removeTone('nǚ hǎo') // 'nü hao'
  */
 export function removeTone(text: string): string {

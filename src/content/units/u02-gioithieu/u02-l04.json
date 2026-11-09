@@ -1,0 +1,82 @@
+{
+  "id": "u02-l04",
+  "unitId": "u02",
+  "order": 4,
+  "title": "Thử thách: Làm quen bạn mới",
+  "emoji": "🏆",
+  "estMinutes": 5,
+  "isChallenge": true,
+  "newItems": [],
+  "reviewItems": [
+    { "kind": "word", "id": "w_wo" },
+    { "kind": "word", "id": "w_ta_m" },
+    { "kind": "word", "id": "w_ta_f" },
+    { "kind": "word", "id": "w_shi" },
+    { "kind": "word", "id": "w_xuesheng" },
+    { "kind": "word", "id": "w_jiao" },
+    { "kind": "word", "id": "w_mingzi" },
+    { "kind": "word", "id": "w_shenme" },
+    { "kind": "word", "id": "w_ren" },
+    { "kind": "word", "id": "w_yuenan" },
+    { "kind": "word", "id": "w_zhongguo" },
+    { "kind": "word", "id": "w_ma" },
+    { "kind": "grammar", "id": "g_shi" },
+    { "kind": "grammar", "id": "g_jiao" },
+    { "kind": "grammar", "id": "g_ma" }
+  ],
+  "autoGenerate": true,
+  "challenge": {
+    "id": "u02-l04-boss",
+    "type": "dialogue",
+    "prompt": "Ngày đầu đến lớp tiếng Trung, bạn làm quen với người ngồi cạnh.",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好！你叫什么名字？",
+        "pinyin": "Nǐ hǎo! Nǐ jiào shén me míng zi?",
+        "vi": "Chào bạn! Bạn tên gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我叫阿南。",
+        "pinyin": "Wǒ jiào Ā Nán.",
+        "vi": "Mình tên A Nam.",
+        "choices": ["我叫阿南。", "我是阿南吗？", "阿南，再见！"]
+      },
+      {
+        "speaker": "A",
+        "zh": "你是中国人吗？",
+        "pinyin": "Nǐ shì Zhōng guó rén ma?",
+        "vi": "Bạn là người Trung Quốc à?"
+      },
+      {
+        "speaker": "B",
+        "zh": "不是，我是越南人。",
+        "pinyin": "Bù shì, wǒ shì Yuè nán rén.",
+        "vi": "Không, mình là người Việt Nam.",
+        "choices": ["不是，我是越南人。", "是，我是中国人。", "我不是学生。"]
+      },
+      {
+        "speaker": "A",
+        "zh": "你是学生吗？",
+        "pinyin": "Nǐ shì xué sheng ma?",
+        "vi": "Bạn là học sinh à?"
+      },
+      {
+        "speaker": "B",
+        "zh": "是，我是学生。",
+        "pinyin": "Shì, wǒ shì xué sheng.",
+        "vi": "Phải, mình là học sinh.",
+        "choices": ["是，我是学生。", "我叫学生。", "学生是我吗？"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "Giới thiệu: 我叫… · 我是越南人 · 我是学生.",
+      "Hỏi lại: 你叫什么名字？ · 你是…吗？",
+      "Đáp có/không: 是 / 不是."
+    ],
+    "tip": "Xong Chương 2 — bạn đã tự giới thiệu được bằng tiếng Trung rồi đấy!"
+  }
+}

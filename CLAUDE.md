@@ -41,7 +41,6 @@
 - lint + test + build đều pass, tiêu chí nghiệm thu trong SPEC đạt, đã commit.
 
 ## Known issues / TODO
-- Chưa có file dữ liệu ngữ pháp (grammar): mọi tham chiếu `kind: "grammar"` trong bài sẽ bị `validate:content` báo thiếu.
 - Chữ đa âm 了/的/得: pinyin-pro có thể đọc sai khi đứng riêng (VD 了 → liǎo) → cần danh sách ngoại lệ trong `validate:content` khi làm Chương 1–2.
 - Giao diện tạm luôn theo hệ thống (`applyTheme('system')` trong `main.tsx`); cài đặt sáng/tối lưu trong settings sẽ nối ở M3.
 - `/dev/gallery` chỉ có ở bản dev (`import.meta.env.DEV`), production không có route này.
@@ -64,4 +63,8 @@ Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong
 - **Góc Chữ Hán**: 好 人 chép SPEC 12.3; thêm 女 子 日 月 (chữ tượng hình đơn giản, `pictograph: true`). Gán `hanziOfLesson`: u00-l05 女, u01-l02 人, u01-l03 日.
 - **Thẻ Văn Hóa** gán cho chương: u00 → số 8, u01 → Tết Trung Thu (chương 2–12 chưa gán). Thẻ có `zh`/`pinyin` được validator đối chiếu như từ vựng.
 - **Trạm chương 2–12** SPEC chỉ nêu Chương 1 Bắc Kinh, 6 quán trà, 9 Hoàng Sơn; các trạm còn lại tự đặt (Thượng Hải, Chợ đêm Tây An, Tứ hợp viện, Tháp Trống, Lệ Giang, Đại học Bắc Kinh, Ga tàu cao tốc, Sông Ly Quế Lâm, Vạn Lý Trường Thành). `plannedWords` chép đúng bảng SPEC Mục 3.
+- **Chương 2 thêm 3 từ ngoài danh sách SPEC**: 什么 (hỏi tên), 吗 (câu hỏi có/không), 学生 (chép SPEC 12.2, cần cho câu 是 mẫu; Chương 8 vẫn giữ trong plannedWords). Hán-Việt của 什么 và 吗 bỏ trống vì không chắc.
+- **`grammar.json`** có 3 điểm: g_shi (A 是 B), g_jiao (hỏi/nói tên), g_ma (câu hỏi 吗); ví dụ có `tokens` để sinh bài sắp xếp câu. Ngữ pháp là `newItems` kind "grammar" trong bài (SRS cho grammar để engine quyết ở M5).
+- **Tên nhân vật trong hội thoại**: 阿南 Ā Nán (người Việt) và 小明 Xiǎo Míng (người Trung Quốc); 你呢 xuất hiện trong hội thoại nhưng chưa là từ riêng.
+- **u02 → Thẻ Văn Hóa 12 con giáp**; Góc Chữ Hán Chương 2: 口 大 中.
 - **`copy-hanzi-data` bỏ qua `course.json`** để không precache nét của `plannedWords` chưa dạy (141 → 77 chữ; 77 gồm cả chữ trong Thẻ Văn Hóa).

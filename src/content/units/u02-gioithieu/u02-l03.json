@@ -1,0 +1,79 @@
+{
+  "id": "u02-l03",
+  "unitId": "u02",
+  "order": 3,
+  "title": "Tôi là người Việt Nam",
+  "emoji": "🇻🇳",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "word", "id": "w_ren" },
+    { "kind": "word", "id": "w_yuenan" },
+    { "kind": "word", "id": "w_zhongguo" },
+    { "kind": "word", "id": "w_ma" },
+    { "kind": "grammar", "id": "g_ma" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u02-l03-e1",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Tôi là người Việt Nam.\"",
+      "tokens": ["我", "是", "越南", "人", "。"],
+      "answer": ["我", "是", "越南", "人", "。"],
+      "vi": "Tôi là người Việt Nam.",
+      "pinyin": "Wǒ shì Yuè nán rén."
+    },
+    {
+      "id": "u02-l03-e2",
+      "type": "fill_blank",
+      "sentence": "你是中国人___？",
+      "answer": "吗",
+      "options": ["吗", "什么", "是", "不"],
+      "vi": "Bạn là người Trung Quốc à?",
+      "explain": "Thêm 吗 vào cuối câu khẳng định là thành câu hỏi."
+    },
+    {
+      "id": "u02-l03-e3",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Anh ấy là người Việt Nam à?\"",
+      "tokens": ["他", "是", "越南人", "吗", "？"],
+      "answer": ["他", "是", "越南人", "吗", "？"],
+      "vi": "Anh ấy là người Việt Nam à?",
+      "pinyin": "Tā shì Yuè nán rén ma?"
+    }
+  ],
+  "challenge": {
+    "id": "u02-l03-boss",
+    "type": "dialogue",
+    "prompt": "Một người hỏi bạn có phải người Trung Quốc không. Trả lời đúng sự thật nhé!",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你是中国人吗？",
+        "pinyin": "Nǐ shì Zhōng guó rén ma?",
+        "vi": "Bạn là người Trung Quốc à?"
+      },
+      {
+        "speaker": "B",
+        "zh": "不是，我是越南人。",
+        "pinyin": "Bù shì, wǒ shì Yuè nán rén.",
+        "vi": "Không phải, mình là người Việt Nam.",
+        "choices": ["不是，我是越南人。", "是，我是越南人。", "我叫越南人。"]
+      }
+    ]
+  },
+  "recap": {
+    "keyPoints": [
+      "Tên nước + 人 = người nước đó: 越南人, 中国人.",
+      "Câu hỏi có/không: thêm 吗 vào cuối — 你是中国人吗？",
+      "Trả lời ngắn: 是 (phải) / 不是 (không phải)."
+    ],
+    "pattern": {
+      "zh": "你是中国人吗？",
+      "pinyin": "Nǐ shì Zhōng guó rén ma?",
+      "vi": "Bạn là người Trung Quốc à?"
+    },
+    "tip": "越南 Việt Nam, 中国 Trung Quốc — tên nước đọc lên là nhận ra ngay âm Hán-Việt."
+  },
+  "hanziOfLesson": "中"
+}

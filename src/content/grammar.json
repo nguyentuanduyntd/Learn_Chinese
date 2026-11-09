@@ -1,0 +1,68 @@
+[
+  {
+    "id": "g_shi",
+    "title": "Câu chữ 是: A 是 B",
+    "pattern": "A 是 B",
+    "explanation": "是 shì nối hai danh từ, giống 'là' tiếng Việt: A là B. Phủ định thêm 不 trước 是: A 不是 B. Không chia theo ngôi hay số — 我是, 你是, 他是 đều giữ nguyên 是.",
+    "examples": [
+      {
+        "zh": "我是学生。",
+        "pinyin": "Wǒ shì xué sheng.",
+        "vi": "Tôi là học sinh.",
+        "tokens": ["我", "是", "学生", "。"]
+      },
+      {
+        "zh": "她是老师。",
+        "pinyin": "Tā shì lǎo shī.",
+        "vi": "Cô ấy là giáo viên.",
+        "tokens": ["她", "是", "老师", "。"]
+      },
+      {
+        "zh": "他不是中国人。",
+        "pinyin": "Tā bù shì Zhōng guó rén.",
+        "vi": "Anh ấy không phải người Trung Quốc.",
+        "tokens": ["他", "不是", "中国人", "。"]
+      }
+    ]
+  },
+  {
+    "id": "g_jiao",
+    "title": "Hỏi và nói tên: 叫",
+    "pattern": "你叫什么名字？— 我叫 + tên",
+    "explanation": "叫 jiào = tên là. Hỏi tên: 你叫什么名字？ Trả lời: 我叫 + tên. Từ để hỏi 什么 đứng đúng chỗ của câu trả lời, không đảo lên đầu như tiếng Anh.",
+    "examples": [
+      {
+        "zh": "你叫什么名字？",
+        "pinyin": "Nǐ jiào shén me míng zi?",
+        "vi": "Bạn tên là gì?",
+        "tokens": ["你", "叫", "什么", "名字", "？"]
+      },
+      {
+        "zh": "我叫阿南。",
+        "pinyin": "Wǒ jiào Ā Nán.",
+        "vi": "Tôi tên là A Nam.",
+        "tokens": ["我", "叫", "阿南", "。"]
+      }
+    ]
+  },
+  {
+    "id": "g_ma",
+    "title": "Câu hỏi với 吗",
+    "pattern": "Câu khẳng định + 吗？",
+    "explanation": "Thêm 吗 ma vào cuối câu khẳng định là có câu hỏi có/không, trật tự từ giữ nguyên. Trả lời ngắn bằng 是 (phải) hoặc 不是 (không phải).",
+    "examples": [
+      {
+        "zh": "你是学生吗？",
+        "pinyin": "Nǐ shì xué sheng ma?",
+        "vi": "Bạn là học sinh à?",
+        "tokens": ["你", "是", "学生", "吗", "？"]
+      },
+      {
+        "zh": "他是越南人吗？",
+        "pinyin": "Tā shì Yuè nán rén ma?",
+        "vi": "Anh ấy là người Việt Nam à?",
+        "tokens": ["他", "是", "越南人", "吗", "？"]
+      }
+    ]
+  }
+]

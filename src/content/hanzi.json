@@ -61,5 +61,35 @@
     "strokes": 4,
     "similar": ["日", "用"],
     "pictograph": true
+  },
+  {
+    "char": "口",
+    "pinyin": "kǒu",
+    "hanViet": "khẩu",
+    "meaning": "miệng; cửa",
+    "mnemonic": "Cái miệng mở ra thành hình vuông — KHẨU như trong 'khẩu vị', 'nhân khẩu'.",
+    "strokes": 3,
+    "similar": ["日", "囗"],
+    "pictograph": true
+  },
+  {
+    "char": "大",
+    "pinyin": "dà",
+    "hanViet": "đại",
+    "meaning": "to, lớn",
+    "mnemonic": "Người (人) dang rộng hai tay để khoe 'to thế này này!' — ĐẠI như 'đại học', 'vĩ đại'.",
+    "strokes": 3,
+    "similar": ["太", "天"],
+    "pictograph": true
+  },
+  {
+    "char": "中",
+    "pinyin": "zhōng",
+    "hanViet": "trung",
+    "meaning": "giữa; trúng",
+    "mnemonic": "Mũi tên cắm xuyên qua chính giữa tấm bia — TRUNG như 'trung tâm', 'Trung Quốc'.",
+    "strokes": 4,
+    "similar": ["口", "串"],
+    "pictograph": true
   }
 ]

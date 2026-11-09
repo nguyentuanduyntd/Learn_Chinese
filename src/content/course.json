@@ -28,8 +28,8 @@
       "station": "Thượng Hải",
       "theme": "#457B9D",
       "emoji": "🧑",
-      "lessonIds": [],
-      "plannedWords": ["我", "你", "他", "她", "是", "叫", "名字", "人", "中国", "越南"]
+      "lessonIds": ["u02-l01", "u02-l02", "u02-l03", "u02-l04"],
+      "cultureCardId": "c_12_con_giap"
     },
     {
       "id": "u03",

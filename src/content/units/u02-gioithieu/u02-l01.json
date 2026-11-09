@@ -1,0 +1,63 @@
+{
+  "id": "u02-l01",
+  "unitId": "u02",
+  "order": 1,
+  "title": "Tôi là học sinh",
+  "emoji": "🙋",
+  "estMinutes": 6,
+  "newItems": [
+    { "kind": "word", "id": "w_wo" },
+    { "kind": "word", "id": "w_ta_m" },
+    { "kind": "word", "id": "w_ta_f" },
+    { "kind": "word", "id": "w_shi" },
+    { "kind": "word", "id": "w_xuesheng" },
+    { "kind": "grammar", "id": "g_shi" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u02-l01-e1",
+      "type": "sentence_order",
+      "prompt": "Sắp xếp câu: \"Tôi là học sinh.\"",
+      "tokens": ["我", "是", "学生", "。"],
+      "answer": ["我", "是", "学生", "。"],
+      "vi": "Tôi là học sinh.",
+      "pinyin": "Wǒ shì xué sheng."
+    },
+    {
+      "id": "u02-l01-e2",
+      "type": "fill_blank",
+      "sentence": "她___老师。",
+      "answer": "是",
+      "options": ["是", "叫", "好", "不"],
+      "vi": "Cô ấy là giáo viên.",
+      "explain": "A 是 B: 是 đứng giữa hai danh từ, nghĩa là 'là'."
+    },
+    {
+      "id": "u02-l01-e3",
+      "type": "listen_choice",
+      "itemId": "w_ta_f",
+      "explain": "他 và 她 đều đọc tā — nghe không phân biệt được, phải dựa vào ngữ cảnh hoặc chữ viết."
+    }
+  ],
+  "challenge": {
+    "id": "u02-l01-boss",
+    "type": "sentence_order",
+    "prompt": "Sắp xếp câu: \"Anh ấy không phải là giáo viên.\"",
+    "tokens": ["他", "不是", "老师", "。"],
+    "answer": ["他", "不是", "老师", "。"],
+    "vi": "Anh ấy không phải là giáo viên.",
+    "pinyin": "Tā bù shì lǎo shī.",
+    "explain": "Phủ định của 是 là 不是 (đọc bú shì)."
+  },
+  "recap": {
+    "keyPoints": [
+      "A 是 B = A là B: 我是学生 wǒ shì xué sheng.",
+      "Phủ định: A 不是 B — 他不是老师.",
+      "他 (anh ấy) và 她 (cô ấy) đọc giống nhau: tā."
+    ],
+    "pattern": { "zh": "我是学生。", "pinyin": "Wǒ shì xué sheng.", "vi": "Tôi là học sinh." },
+    "tip": "学生 = học sinh — âm Hán-Việt gần như y nguyên, bạn đã biết từ này rồi!"
+  },
+  "hanziOfLesson": "口"
+}

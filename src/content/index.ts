@@ -5,6 +5,7 @@
 import type {
   Course,
   CultureCard,
+  GrammarPoint,
   HanziInfo,
   ItemKind,
   Lesson,
@@ -14,6 +15,7 @@ import type {
 } from '@/types/content';
 import courseJson from './course.json';
 import cultureJson from './culture.json';
+import grammarJson from './grammar.json';
 import hanziJson from './hanzi.json';
 import syllablesJson from './syllables.json';
 import wordsJson from './words.json';
@@ -32,6 +34,7 @@ export const words = wordsJson as Word[];
 export const hanzi = hanziJson as HanziInfo[];
 export const syllables = syllablesJson as SyllableItem[];
 export const cultureCards = cultureJson as CultureCard[];
+export const grammarPoints = grammarJson as GrammarPoint[];
 
 const byId = <T>(list: T[], key: (item: T) => string) =>
   new Map(list.map((item) => [key(item), item]));
@@ -42,6 +45,7 @@ const wordById = byId(words, (w) => w.id);
 const hanziByChar = byId(hanzi, (h) => h.char);
 const syllableById = byId(syllables, (s) => s.id);
 const cultureById = byId(cultureCards, (c) => c.id);
+const grammarById = byId(grammarPoints, (g) => g.id);
 
 export const getUnit = (id: string) => unitById.get(id);
 export const getLesson = (id: string) => lessonById.get(id);
@@ -49,17 +53,19 @@ export const getWord = (id: string) => wordById.get(id);
 export const getHanzi = (char: string) => hanziByChar.get(char);
 export const getSyllable = (id: string) => syllableById.get(id);
 export const getCultureCard = (id: string) => cultureById.get(id);
+export const getGrammar = (id: string) => grammarById.get(id);
 
 /** Các bài của một chương theo thứ tự `lessonIds`. */
 export function lessonsOfUnit(unitId: string): Lesson[] {
   return (getUnit(unitId)?.lessonIds ?? []).flatMap((id) => getLesson(id) ?? []);
 }
 
-/** Mục học theo (kind, id) — dùng cho newItems/reviewItems. Ngữ pháp chưa có dữ liệu. */
+/** Mục học theo (kind, id) — dùng cho newItems/reviewItems. */
 export type ContentItem =
   | { kind: 'word'; item: Word }
   | { kind: 'hanzi'; item: HanziInfo }
-  | { kind: 'syllable'; item: SyllableItem };
+  | { kind: 'syllable'; item: SyllableItem }
+  | { kind: 'grammar'; item: GrammarPoint };
 
 export function getItem(kind: ItemKind, id: string): ContentItem | undefined {
   switch (kind) {
@@ -75,7 +81,9 @@ export function getItem(kind: ItemKind, id: string): ContentItem | undefined {
       const item = getSyllable(id);
       return item && { kind, item };
     }
-    case 'grammar':
-      return undefined;
+    case 'grammar': {
+      const item = getGrammar(id);
+      return item && { kind, item };
+    }
   }
 }

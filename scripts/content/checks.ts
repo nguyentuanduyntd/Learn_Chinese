@@ -62,7 +62,7 @@ export function crossCheckPinyin(zh: string, pinyin: string, where: string): Iss
   actual.forEach((syllable, i) => {
     const dict = expected[i];
     const label = `${chars[i] ?? ''} "${syllable}"`;
-    if (removeTone(syllable).toLowerCase() !== removeTone(dict)) {
+    if (removeTone(syllable.toLowerCase()) !== removeTone(dict)) {
       issues.push(error(where, `${label} khác từ điển "${dict}"`));
     } else if (getTone(syllable) !== 5 && getTone(syllable) !== getTone(dict)) {
       issues.push(warning(where, `${label} khác thanh từ điển "${dict}"`));
@@ -95,7 +95,7 @@ export function checkSyllableItem(item: SyllableItem): Issue[] {
     issues.push(error(where, `sau ${item.initial} vận mẫu viết ü, không viết u ("${item.final}")`));
   }
   const spelled = (item.initial + item.final).replace(/^([jqxy])ü/, '$1u');
-  if (spelled !== removeTone(item.pinyin).toLowerCase()) {
+  if (spelled !== removeTone(item.pinyin.toLowerCase())) {
     issues.push(error(where, `initial + final = "${spelled}" không khớp pinyin "${item.pinyin}"`));
   }
   return issues;
