@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "c_tet_trung_thu",
+    "title": "Tết Trung Thu",
+    "emoji": "🥮",
+    "zh": "中秋节",
+    "pinyin": "Zhōng qiū jié",
+    "summary": "Rằm tháng Tám: ngày đoàn viên, ngắm trăng và ăn bánh trung thu.",
+    "body": [
+      "Trung Thu rơi vào rằm tháng Tám âm lịch, khi trăng tròn và sáng nhất trong năm. Ở Trung Quốc, đây là ngày của gia đình: người đi xa cố gắng về nhà, cả nhà cùng ngắm trăng và chia nhau bánh trung thu (月饼 yuè bǐng).",
+      "Người Việt mình coi Trung Thu là Tết thiếu nhi với đèn ông sao và múa lân; người Trung Quốc lại nhấn vào sự đoàn viên — trăng tròn tượng trưng cho gia đình sum họp.",
+      "Truyền thuyết gắn với ngày này là nàng Hằng Nga (嫦娥 Cháng é) bay lên cung trăng. Khi ngắm trăng, người ta thường kể lại câu chuyện ấy cho trẻ nhỏ."
+    ]
+  },
+  {
+    "id": "c_so_8",
+    "title": "Số 8 may mắn",
+    "emoji": "8️⃣",
+    "zh": "八",
+    "pinyin": "bā",
+    "summary": "Vì sao người Trung Quốc mê số 8 và tránh số 4.",
+    "body": [
+      "Số 8 (八 bā) đọc gần giống 发 fā trong 发财 fā cái — phát tài. Vì thế số 8 được coi là may mắn: biển số xe, số điện thoại có nhiều số 8 thường được trả giá rất cao.",
+      "Thế vận hội Bắc Kinh 2008 khai mạc đúng ngày 8 tháng 8, lúc 8 giờ 8 phút tối — không phải ngẫu nhiên.",
+      "Ngược lại, số 4 (四 sì) đọc gần 死 sǐ (chết) nên nhiều tòa nhà bỏ qua tầng 4, giống như cách người Việt mình kiêng một số con số."
+    ]
+  },
+  {
+    "id": "c_dua",
+    "title": "Phép lịch sự với đôi đũa",
+    "emoji": "🥢",
+    "zh": "筷子",
+    "pinyin": "kuài zi",
+    "summary": "Vài điều nên tránh khi cầm đũa trên bàn ăn Trung Quốc.",
+    "body": [
+      "Đũa tiếng Trung là 筷子 kuài zi. Chữ 筷 đọc giống 快 kuài (nhanh), nên đôi đũa còn mang ý chúc mọi việc suôn sẻ, nhanh chóng.",
+      "Điều kiêng lớn nhất: không cắm đũa thẳng đứng vào bát cơm — trông giống nén hương cúng người đã khuất. Cũng không gõ đũa vào bát, không dùng đũa chỉ vào người khác.",
+      "Khi nghỉ tay, đặt đũa nằm ngang trên gác đũa hoặc trên miệng bát. Những phép tắc này khá giống mâm cơm Việt, nên bạn sẽ thấy quen thuộc."
+    ]
+  },
+  {
+    "id": "c_tra_long_tinh",
+    "title": "Trà Long Tỉnh",
+    "emoji": "🍵",
+    "zh": "龙井茶",
+    "pinyin": "Lóng jǐng chá",
+    "summary": "Loại trà xanh nổi tiếng nhất Trung Quốc, đến từ Hàng Châu.",
+    "body": [
+      "龙井 Lóng jǐng nghĩa là Giếng Rồng — tên một ngôi làng bên Tây Hồ, Hàng Châu. Trà Long Tỉnh là trà xanh, lá dẹt và thẳng vì được sao bằng tay trên chảo nóng.",
+      "Người ta thường pha Long Tỉnh trong ly thủy tinh để vừa uống vừa ngắm những lá trà từ từ dựng đứng rồi chìm xuống đáy.",
+      "Trà ngon nhất hái trước tiết Thanh Minh (đầu tháng Tư), gọi là 明前茶 míng qián chá — búp non, hương dịu, giá cũng cao nhất."
+    ]
+  },
+  {
+    "id": "c_12_con_giap",
+    "title": "12 con giáp",
+    "emoji": "🐉",
+    "zh": "生肖",
+    "pinyin": "shēng xiào",
+    "summary": "Giống Việt Nam đến bất ngờ — nhưng có một con khác hẳn.",
+    "body": [
+      "12 con giáp Trung Quốc (生肖 shēng xiào) gần như trùng với Việt Nam: Tý, Sửu, Dần, Mão… Khác biệt lớn nhất: năm Mão ở Việt Nam là mèo, còn ở Trung Quốc là thỏ (兔 tù).",
+      "Năm tuổi của mình gọi là 本命年 běn mìng nián. Người Trung Quốc tin năm này dễ gặp xui, nên hay mặc đồ đỏ — từ áo đến tất — để lấy may suốt cả năm.",
+      "Hỏi tuổi một cách lịch sự, người ta thường hỏi 你属什么？ nǐ shǔ shén me? — bạn tuổi con gì?"
+    ]
+  }
+]

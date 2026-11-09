@@ -1,6 +1,7 @@
 /** Kiểm tra toàn bộ nội dung đã parse: id, liên kết, tham chiếu, pinyin. Hàm thuần. */
 import type {
   Course,
+  CultureCard,
   ExerciseSpec,
   HanziInfo,
   ItemKind,
@@ -24,6 +25,7 @@ export interface ContentBundle {
   syllables: SyllableItem[];
   words: Word[];
   hanzi: HanziInfo[];
+  culture?: CultureCard[];
 }
 
 /** Báo các id xuất hiện quá một lần. */
@@ -41,7 +43,7 @@ const exercisesOf = (l: Lesson): ExerciseSpec[] => [
 ];
 
 export function validateContent(c: ContentBundle): Issue[] {
-  const { course, lessons } = c;
+  const { course, lessons, culture = [] } = c;
   const issues: Issue[] = [
     ...findDuplicates(
       course.units.map((u) => u.id),
@@ -67,13 +69,30 @@ export function validateContent(c: ContentBundle): Issue[] {
       c.hanzi.map((h) => h.char),
       'hanzi',
     ),
+    ...findDuplicates(
+      culture.map((card) => card.id),
+      'culture',
+    ),
   ];
 
-  // Chương ↔ bài
+  // Thẻ Văn Hóa: pinyin khớp chữ Hán
+  for (const card of culture) {
+    if (card.zh && card.pinyin) {
+      issues.push(...checkPair({ zh: card.zh, pinyin: card.pinyin }, `culture › ${card.id}`));
+    } else if (card.zh || card.pinyin) {
+      issues.push(error(`culture › ${card.id}`, 'zh và pinyin phải đi cùng nhau'));
+    }
+  }
+
+  // Chương ↔ bài, chương ↔ thẻ văn hóa
   const lessonIds = new Set(lessons.map((l) => l.id));
+  const cultureIds = new Set(culture.map((card) => card.id));
   for (const unit of course.units) {
     for (const id of unit.lessonIds) {
       if (!lessonIds.has(id)) issues.push(error(`course › ${unit.id}`, `không có bài "${id}"`));
+    }
+    if (unit.cultureCardId && !cultureIds.has(unit.cultureCardId)) {
+      issues.push(error(`course › ${unit.id}`, `không có thẻ văn hóa "${unit.cultureCardId}"`));
     }
   }
   for (const l of lessons) {

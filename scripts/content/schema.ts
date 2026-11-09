@@ -5,6 +5,7 @@
 import { z } from 'zod';
 import type {
   Course,
+  CultureCard,
   ExerciseSpec,
   HanziInfo,
   Lesson,
@@ -13,6 +14,18 @@ import type {
 } from '../../src/types/content';
 
 const text = z.string().min(1);
+
+export const cultureCardSchema: z.ZodType<CultureCard> = z
+  .object({
+    id: text,
+    title: text,
+    emoji: text,
+    summary: text.max(120, 'summary tối đa 120 ký tự'),
+    body: z.array(text).min(1).max(4, 'body tối đa 4 đoạn'),
+    zh: text.optional(),
+    pinyin: text.optional(),
+  })
+  .strict();
 const tone = z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]);
 const example = z.object({ zh: text, pinyin: text, vi: text }).strict();
 

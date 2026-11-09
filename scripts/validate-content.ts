@@ -10,6 +10,7 @@ import type { Lesson } from '../src/types/content';
 import type { Issue } from './content/checks';
 import {
   courseSchema,
+  cultureCardSchema,
   hanziInfoSchema,
   lessonSchema,
   syllableItemSchema,
@@ -59,10 +60,11 @@ const course = load(join(ROOT, 'course.json'), courseSchema);
 const syllables = loadList('syllables.json', syllableItemSchema);
 const words = loadList('words.json', wordSchema);
 const hanzi = loadList('hanzi.json', hanziInfoSchema);
+const culture = loadList('culture.json', cultureCardSchema);
 
 // Chỉ kiểm tra sâu khi schema sạch, tránh báo lỗi dây chuyền.
 if (course && issues.length === 0) {
-  issues.push(...validateContent({ course, lessons, syllables, words, hanzi }));
+  issues.push(...validateContent({ course, lessons, syllables, words, hanzi, culture }));
 }
 
 const errors = issues.filter((i) => i.level === 'error');
@@ -70,7 +72,8 @@ const warnings = issues.filter((i) => i.level === 'warning');
 for (const i of warnings) console.warn(`⚠ ${i.where}: ${i.message}`);
 for (const i of errors) console.error(`✗ ${i.where}: ${i.message}`);
 console.log(
-  `validate:content — ${lessons.length} bài, ${syllables.length} âm tiết, ${words.length} từ: ` +
+  `validate:content — ${lessons.length} bài, ${syllables.length} âm tiết, ${words.length} từ, ` +
+    `${hanzi.length} chữ, ${culture.length} thẻ văn hóa: ` +
     `${errors.length} lỗi, ${warnings.length} cảnh báo`,
 );
 process.exitCode = errors.length > 0 ? 1 : 0;

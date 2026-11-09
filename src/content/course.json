@@ -8,7 +8,8 @@
       "station": "Điểm xuất phát",
       "theme": "#F4A261",
       "emoji": "🎵",
-      "lessonIds": ["u00-l01", "u00-l02", "u00-l03", "u00-l04", "u00-l05"]
+      "lessonIds": ["u00-l01", "u00-l02", "u00-l03", "u00-l04", "u00-l05"],
+      "cultureCardId": "c_so_8"
     },
     {
       "id": "u01",
@@ -17,7 +18,8 @@
       "station": "Bắc Kinh",
       "theme": "#E63946",
       "emoji": "🏮",
-      "lessonIds": ["u01-l01", "u01-l02", "u01-l03", "u01-l04"]
+      "lessonIds": ["u01-l01", "u01-l02", "u01-l03", "u01-l04"],
+      "cultureCardId": "c_tet_trung_thu"
     }
   ]
 }

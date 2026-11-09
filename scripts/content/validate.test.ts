@@ -173,6 +173,20 @@ describe('validateContent', () => {
     expect(messages).toContain('không có syllable "s_khong_co"');
   });
 
+  it('báo thẻ văn hóa: cultureCardId không tồn tại, zh thiếu pinyin', () => {
+    const unit = { ...course.units[0], lessonIds: [], cultureCardId: 'c_khong_co' };
+    const messages = validateContent({
+      course: { ...course, units: [unit] },
+      lessons: [],
+      syllables: [],
+      words: [],
+      hanzi: [],
+      culture: [{ id: 'c_x', title: 'X', emoji: '🍵', summary: 'x', body: ['x'], zh: '茶' }],
+    }).map((i) => i.message);
+    expect(messages).toContain('không có thẻ văn hóa "c_khong_co"');
+    expect(messages).toContain('zh và pinyin phải đi cùng nhau');
+  });
+
   it('báo hanziOfLesson chưa có trong hanzi.json', () => {
     const messages = validateContent({
       course,
