@@ -20,6 +20,130 @@
       "emoji": "🏮",
       "lessonIds": ["u01-l01", "u01-l02", "u01-l03", "u01-l04"],
       "cultureCardId": "c_tet_trung_thu"
+    },
+    {
+      "id": "u02",
+      "order": 2,
+      "title": "Giới thiệu bản thân",
+      "station": "Thượng Hải",
+      "theme": "#457B9D",
+      "emoji": "🧑",
+      "lessonIds": [],
+      "plannedWords": ["我", "你", "他", "她", "是", "叫", "名字", "人", "中国", "越南"]
+    },
+    {
+      "id": "u03",
+      "order": 3,
+      "title": "Số đếm & Tuổi",
+      "station": "Chợ đêm Tây An",
+      "theme": "#F4A261",
+      "emoji": "🔢",
+      "lessonIds": [],
+      "plannedWords": [
+        "一",
+        "二",
+        "三",
+        "四",
+        "五",
+        "六",
+        "七",
+        "八",
+        "九",
+        "十",
+        "几",
+        "多大",
+        "岁"
+      ]
+    },
+    {
+      "id": "u04",
+      "order": 4,
+      "title": "Gia đình",
+      "station": "Tứ hợp viện",
+      "theme": "#E76F51",
+      "emoji": "👨‍👩‍👧",
+      "lessonIds": [],
+      "plannedWords": ["爸爸", "妈妈", "儿子", "女儿", "家", "有", "没有"]
+    },
+    {
+      "id": "u05",
+      "order": 5,
+      "title": "Thời gian",
+      "station": "Tháp Trống Bắc Kinh",
+      "theme": "#2A9D8F",
+      "emoji": "🕰️",
+      "lessonIds": [],
+      "plannedWords": ["今天", "明天", "昨天", "年", "月", "日", "星期", "点", "分"]
+    },
+    {
+      "id": "u06",
+      "order": 6,
+      "title": "Ăn uống",
+      "station": "Quán trà Hàng Châu",
+      "theme": "#2A9D8F",
+      "emoji": "🍵",
+      "lessonIds": [],
+      "plannedWords": ["吃", "喝", "米饭", "茶", "水", "菜", "喜欢", "想"]
+    },
+    {
+      "id": "u07",
+      "order": 7,
+      "title": "Mua sắm",
+      "station": "Phố cổ Lệ Giang",
+      "theme": "#E63946",
+      "emoji": "🛍️",
+      "lessonIds": [],
+      "plannedWords": ["买", "多少", "钱", "块", "个", "本", "这", "那"]
+    },
+    {
+      "id": "u08",
+      "order": 8,
+      "title": "Trường học & Công việc",
+      "station": "Đại học Bắc Kinh",
+      "theme": "#457B9D",
+      "emoji": "🎓",
+      "lessonIds": [],
+      "plannedWords": ["学生", "老师", "学校", "同学", "工作", "医生"]
+    },
+    {
+      "id": "u09",
+      "order": 9,
+      "title": "Thời tiết",
+      "station": "Núi Hoàng Sơn",
+      "theme": "#8C7B6B",
+      "emoji": "⛰️",
+      "lessonIds": [],
+      "plannedWords": ["天气", "热", "冷", "下雨", "太…了"]
+    },
+    {
+      "id": "u10",
+      "order": 10,
+      "title": "Đi lại & Nơi chốn",
+      "station": "Ga tàu cao tốc",
+      "theme": "#457B9D",
+      "emoji": "🚄",
+      "lessonIds": [],
+      "plannedWords": ["去", "来", "在", "哪儿", "这儿", "那儿", "飞机", "出租车"]
+    },
+    {
+      "id": "u11",
+      "order": 11,
+      "title": "Sở thích & Hoạt động",
+      "station": "Sông Ly Quế Lâm",
+      "theme": "#2A9D8F",
+      "emoji": "🎬",
+      "lessonIds": [],
+      "plannedWords": ["看", "听", "说", "读", "写", "电影", "书", "会", "能"]
+    },
+    {
+      "id": "u12",
+      "order": 12,
+      "title": "Tổng ôn HSK 1",
+      "station": "Vạn Lý Trường Thành",
+      "theme": "#E63946",
+      "emoji": "🏯",
+      "lessonIds": [],
+      "plannedWords": []
     }
   ]
 }

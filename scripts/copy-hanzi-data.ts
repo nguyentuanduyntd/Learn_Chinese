@@ -18,7 +18,8 @@ const fileName = (char: string) => `${char.codePointAt(0)?.toString(16)}.json`;
 // 1. Gom chữ Hán trong mọi file JSON nội dung (dấu câu ，！。 không thuộc Script=Han).
 const chars = new Set<string>();
 for (const f of readdirSync(CONTENT, { recursive: true, encoding: 'utf8' })) {
-  if (!f.endsWith('.json')) continue;
+  // course.json chỉ có plannedWords của chương chưa dạy → không precache nét của chúng.
+  if (!f.endsWith('.json') || f === 'course.json') continue;
   for (const c of readFileSync(join(CONTENT, f), 'utf8').match(/\p{Script=Han}/gu) ?? []) {
     chars.add(c);
   }

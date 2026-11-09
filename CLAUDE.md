@@ -59,3 +59,9 @@ Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong
 - **Noto Sans SC nạp động sau lần vẽ đầu** (`import()` trong `main.tsx`) thay vì precache theo lát như mục "Quyết định đã chốt" — bản @fontsource đã chia 100+ lát theo `unicode-range`, trình duyệt tự tải lát cần; precache chọn lọc để M9 (PWA) quyết.
 - **E2E chạy cả 2 thiết bị trên Chromium** (iPhone 13 chỉ giả lập viewport, không cài WebKit) để nhẹ máy dev/CI.
 - **Icon PWA = Bao trên nền đỏ**, sinh từ chính component `Bao`; file PNG được commit (không gitignore như `public/hanzi`).
+- **u00-l05 Biến điệu** dùng 3 từ mới 不 / 一 / 不是 (不是 mượn 是 của Chương 2); 你好 chỉ nhắc trong keyPoint vì đã là mục mới của u01-l01 — không lặp một item ở hai bài để SRS không tạo thẻ trùng.
+- **Chương 1 = 4 bài**: l01 Xin chào (SPEC 12.4), l02 Cảm ơn & Xin lỗi, l03 Tạm biệt (1 từ), l04 Thử thách chương (`isChallenge`, `newItems: []`, `reviewItems` = 8 từ). Không thêm từ ngoài danh sách chương của SPEC.
+- **Góc Chữ Hán**: 好 人 chép SPEC 12.3; thêm 女 子 日 月 (chữ tượng hình đơn giản, `pictograph: true`). Gán `hanziOfLesson`: u00-l05 女, u01-l02 人, u01-l03 日.
+- **Thẻ Văn Hóa** gán cho chương: u00 → số 8, u01 → Tết Trung Thu (chương 2–12 chưa gán). Thẻ có `zh`/`pinyin` được validator đối chiếu như từ vựng.
+- **Trạm chương 2–12** SPEC chỉ nêu Chương 1 Bắc Kinh, 6 quán trà, 9 Hoàng Sơn; các trạm còn lại tự đặt (Thượng Hải, Chợ đêm Tây An, Tứ hợp viện, Tháp Trống, Lệ Giang, Đại học Bắc Kinh, Ga tàu cao tốc, Sông Ly Quế Lâm, Vạn Lý Trường Thành). `plannedWords` chép đúng bảng SPEC Mục 3.
+- **`copy-hanzi-data` bỏ qua `course.json`** để không precache nét của `plannedWords` chưa dạy (141 → 77 chữ; 77 gồm cả chữ trong Thẻ Văn Hóa).
