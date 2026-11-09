@@ -15,7 +15,7 @@
     "test:e2e": "playwright test",
     "validate:content": "tsx scripts/validate-content.ts",
     "hanzi:copy": "tsx scripts/copy-hanzi-data.ts",
-    "icons": "tsx scripts/generate-icons.ts"
+    "icons": "tsx --tsconfig tsconfig.app.json scripts/generate-icons.ts"
   },
   "dependencies": {
     "@fontsource/be-vietnam-pro": "^5.1.0",
