@@ -105,3 +105,22 @@ export interface KvRow {
   key: string;
   value: unknown;
 }
+
+/** Meta lưu trong kv: phiên bản nội dung đã đồng bộ (SPEC 10.3 — xử lý thẻ SRS mồ côi). */
+export interface Meta {
+  contentVersion: string;
+  installedAt: number;
+}
+
+/**
+ * Gói kết quả cuối bài — engine (M5) tính sẵn, repositories chỉ ghi trong 1 transaction.
+ * Không chứa logic nghiệp vụ.
+ */
+export interface LessonCommit {
+  progress: LessonProgress;
+  cards: SrsCard[]; // thẻ mới hoặc đã cập nhật
+  session: SessionLog;
+  recap?: RecapNote;
+  dailyStat: DailyStat;
+  profile: Profile;
+}
