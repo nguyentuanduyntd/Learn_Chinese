@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import { HanVietBadge } from '@/components/hanzi/HanVietBadge';
 import { HanziDisplay } from '@/components/hanzi/HanziDisplay';
 import { Pinyin } from '@/components/hanzi/Pinyin';
@@ -12,7 +12,7 @@ import { Page } from '@/components/ui/Page';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Ring } from '@/components/ui/Ring';
 import { vi } from '@/i18n/vi';
-import { applyTheme } from '@/services/theme';
+import { useSettings } from '@/store/useSettings';
 import type { Tone } from '@/types/content';
 import type { BaoMood } from '@/types/ui';
 import type { ThemeSetting } from '@/types/user';
@@ -33,9 +33,11 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 
 /** Trang /dev/gallery — chỉ có ở bản dev (SPEC M1). */
 export default function Gallery() {
-  const [theme, setTheme] = useState<ThemeSetting>('system');
+  // Đổi giao diện qua settings store → lưu IndexedDB, App áp data-theme.
+  const theme = useSettings((s) => s.settings.theme);
+  const updateSettings = useSettings((s) => s.update);
+  const setTheme = (value: ThemeSetting) => void updateSettings({ theme: value });
   const [sheetOpen, setSheetOpen] = useState(false);
-  useEffect(() => applyTheme(theme), [theme]);
 
   return (
     <Page title={t.title}>

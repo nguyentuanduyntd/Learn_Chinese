@@ -40,6 +40,18 @@ export const vi = {
     hanVietLabel: (reading: string) => `Âm Hán-Việt: ${reading}`,
   },
 
+  tts: {
+    noVoice: 'Máy chưa có giọng đọc tiếng Trung',
+    unsupported: 'Trình duyệt này không hỗ trợ đọc văn bản',
+    installAndroid: 'Android: Cài đặt → Chuyển văn bản thành giọng nói → tải giọng Tiếng Trung.',
+    installIos: 'iOS: Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Trung.',
+  },
+
+  storage: {
+    persisted: 'Bộ nhớ: đã bảo vệ ✓',
+    notPersisted: 'Bộ nhớ: chưa bảo vệ',
+  },
+
   theme: {
     light: 'Sáng',
     dark: 'Tối',

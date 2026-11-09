@@ -42,7 +42,8 @@
 
 ## Known issues / TODO
 - Chữ đa âm 了/的/得: pinyin-pro có thể đọc sai khi đứng riêng (VD 了 → liǎo) → cần danh sách ngoại lệ trong `validate:content` khi làm Chương 1–2.
-- Giao diện tạm luôn theo hệ thống (`applyTheme('system')` trong `main.tsx`); cài đặt sáng/tối lưu trong settings sẽ nối ở M3.
+- `main.tsx` áp `applyTheme('system')` trước lần vẽ đầu; sau khi `useSettings.hydrate()` xong, `App` áp lại theo cài đặt đã lưu (có thể nháy nếu người dùng chọn tối mà hệ thống sáng — chấp nhận ở MVP).
+- TTS chưa kiểm chứng trên Chrome Android thật (nghiệm thu M3 "bấm 🔊 phát âm 你好"); Chromium headless không có giọng zh nên e2e chỉ kiểm tra nhánh `no-voice`/`unsupported`.
 - `/dev/gallery` chỉ có ở bản dev (`import.meta.env.DEV`), production không có route này.
 
 ## Decisions pending review
@@ -67,4 +68,8 @@ Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong
 - **`grammar.json`** có 3 điểm: g_shi (A 是 B), g_jiao (hỏi/nói tên), g_ma (câu hỏi 吗); ví dụ có `tokens` để sinh bài sắp xếp câu. Ngữ pháp là `newItems` kind "grammar" trong bài (SRS cho grammar để engine quyết ở M5).
 - **Tên nhân vật trong hội thoại**: 阿南 Ā Nán (người Việt) và 小明 Xiǎo Míng (người Trung Quốc); 你呢 xuất hiện trong hội thoại nhưng chưa là từ riêng.
 - **u02 → Thẻ Văn Hóa 12 con giáp**; Góc Chữ Hán Chương 2: 口 大 中.
+- **M3 — repositories không chứa logic nghiệp vụ**: `finishLesson(LessonCommit)` chỉ ghi gói kết quả đã tính sẵn (progress, cards, session, recap, dailyStat, profile) trong 1 transaction; SRS/XP/streak tính ở `src/engine` (M5). `settings`/`profile`/`meta`/`activeSession` lưu trong bảng `kv`.
+- **Store Zustand cập nhật lạc quan** (đổi state trước, ghi DB sau); `hydrate()` gọi một lần trong `App`. Gallery đổi giao diện qua store nên cài đặt được lưu.
+- **`src/engine/day.ts`**: `dayKey(ts)` qua ngày lúc 4:00 sáng (SPEC 13.3) — dùng cho `DailyStat.date`, streak (M5).
+- **Dịch vụ không hiện UI**: `speak()` trả `'ok' | 'no-voice' | 'unsupported' | 'error'`, màn hình quyết định toast (chuỗi ở `vi.tts`); `playSfx`/`vibrate` nhận cờ `enabled` từ settings thay vì tự đọc store.
 - **`copy-hanzi-data` bỏ qua `course.json`** để không precache nét của `plannedWords` chưa dạy (141 → 77 chữ; 77 gồm cả chữ trong Thẻ Văn Hóa).
