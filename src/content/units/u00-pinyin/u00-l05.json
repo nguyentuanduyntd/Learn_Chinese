@@ -1,0 +1,48 @@
+{
+  "id": "u00-l05",
+  "unitId": "u00",
+  "order": 5,
+  "title": "Biến điệu: khi thanh đổi giọng",
+  "emoji": "🔄",
+  "estMinutes": 5,
+  "newItems": [
+    { "kind": "word", "id": "w_bu" },
+    { "kind": "word", "id": "w_bushi" },
+    { "kind": "word", "id": "w_yi" }
+  ],
+  "autoGenerate": true,
+  "exercises": [
+    {
+      "id": "u00-l05-e1",
+      "type": "tone_pick",
+      "itemId": "w_yi",
+      "explain": "一 đứng riêng đọc thanh 1: yī."
+    },
+    {
+      "id": "u00-l05-e2",
+      "type": "listen_choice",
+      "itemId": "w_bushi",
+      "explain": "不是 đọc bú shì: 不 đứng trước thanh 4 nên chuyển thành thanh 2."
+    }
+  ],
+  "challenge": {
+    "id": "u00-l05-boss",
+    "type": "meaning_choice",
+    "itemId": "w_bu",
+    "explain": "不 bù = không. Nhớ: trước thanh 4 đọc bú."
+  },
+  "recap": {
+    "keyPoints": [
+      "Hai thanh 3 liền nhau: thanh 3 đầu đọc thành thanh 2 — 你好 đọc ní hǎo.",
+      "不 bù trước thanh 4 đọc thành bú: 不是 bú shì, 不客气 bú kè qi.",
+      "一 yī đứng riêng đọc thanh 1; trước thanh 4 đọc yí: 一个 yí gè."
+    ],
+    "pattern": {
+      "zh": "我不是老师。",
+      "pinyin": "Wǒ bù shì lǎo shī.",
+      "vi": "Tôi không phải là giáo viên."
+    },
+    "tip": "Pinyin trong app luôn ghi thanh gốc; cách đọc thực tế xem ở ghi chú của từ."
+  },
+  "hanziOfLesson": "女"
+}

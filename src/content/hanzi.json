@@ -11,5 +11,55 @@
     "mnemonic": "Mẹ (女) bế con (子) — thật là TỐT!",
     "strokes": 6,
     "similar": ["妈", "她"]
+  },
+  {
+    "char": "人",
+    "pinyin": "rén",
+    "hanViet": "nhân",
+    "meaning": "người",
+    "mnemonic": "Hình một người đang bước đi, hai chân dang ra.",
+    "strokes": 2,
+    "similar": ["入", "八"],
+    "pictograph": true
+  },
+  {
+    "char": "女",
+    "pinyin": "nǚ",
+    "hanViet": "nữ",
+    "meaning": "nữ, phụ nữ",
+    "mnemonic": "Hình người phụ nữ đang quỳ, hai tay khoanh trước ngực — nét vẽ cổ của chữ NỮ.",
+    "strokes": 3,
+    "similar": ["安", "好"],
+    "pictograph": true
+  },
+  {
+    "char": "子",
+    "pinyin": "zǐ",
+    "hanViet": "tử",
+    "meaning": "con, đứa trẻ",
+    "mnemonic": "Em bé quấn tã: đầu to ở trên, hai tay dang ra, chân bó trong tã thành một nét.",
+    "strokes": 3,
+    "similar": ["了", "字"],
+    "pictograph": true
+  },
+  {
+    "char": "日",
+    "pinyin": "rì",
+    "hanViet": "nhật",
+    "meaning": "mặt trời; ngày",
+    "mnemonic": "Mặt trời tròn có chấm ở giữa, lâu dần vuông lại thành chữ NHẬT — như trong 'nhật ký'.",
+    "strokes": 4,
+    "similar": ["目", "白"],
+    "pictograph": true
+  },
+  {
+    "char": "月",
+    "pinyin": "yuè",
+    "hanViet": "nguyệt",
+    "meaning": "mặt trăng; tháng",
+    "mnemonic": "Vầng trăng khuyết có hai vệt sáng bên trong — NGUYỆT như trong 'nguyệt san'.",
+    "strokes": 4,
+    "similar": ["日", "用"],
+    "pictograph": true
   }
 ]

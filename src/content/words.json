@@ -147,5 +147,45 @@
       "vi": "Xin lỗi! — Không sao đâu!"
     },
     "tags": ["hsk1", "chao-hoi"]
+  },
+  {
+    "id": "w_bu",
+    "hanzi": "不",
+    "syllables": [{ "hanzi": "不", "pinyin": "bù", "tone": 4 }],
+    "meaning": "không (phủ định)",
+    "hanViet": "bất",
+    "pos": "phó từ",
+    "example": { "zh": "不好。", "pinyin": "Bù hǎo.", "vi": "Không tốt." },
+    "note": "Đứng trước thanh 4 thì 不 đọc thành thanh 2: 不是 bú shì. Trước thanh khác giữ bù.",
+    "tags": ["hsk1", "bien-dieu"]
+  },
+  {
+    "id": "w_yi",
+    "hanzi": "一",
+    "syllables": [{ "hanzi": "一", "pinyin": "yī", "tone": 1 }],
+    "meaning": "một",
+    "hanViet": "nhất",
+    "pos": "số từ",
+    "example": { "zh": "一、二、三。", "pinyin": "Yī, èr, sān.", "vi": "Một, hai, ba." },
+    "note": "Đứng riêng hoặc khi đếm đọc yī; trước thanh 4 đọc yí (一个 yí gè); trước thanh 1/2/3 đọc yì.",
+    "tags": ["hsk1", "bien-dieu", "so-dem"]
+  },
+  {
+    "id": "w_bushi",
+    "hanzi": "不是",
+    "syllables": [
+      { "hanzi": "不", "pinyin": "bù", "tone": 4, "spokenTone": 2 },
+      { "hanzi": "是", "pinyin": "shì", "tone": 4 }
+    ],
+    "meaning": "không phải (là)",
+    "hanViet": "bất thị",
+    "pos": "cụm từ",
+    "example": {
+      "zh": "我不是学生。",
+      "pinyin": "Wǒ bù shì xué sheng.",
+      "vi": "Tôi không phải là học sinh."
+    },
+    "note": "是 shì là thanh 4 nên 不 đứng trước đọc thành bú: bú shì.",
+    "tags": ["hsk1", "bien-dieu"]
   }
 ]
