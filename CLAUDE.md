@@ -43,7 +43,8 @@
 ## Known issues / TODO
 - Chưa có file dữ liệu ngữ pháp (grammar): mọi tham chiếu `kind: "grammar"` trong bài sẽ bị `validate:content` báo thiếu.
 - Chữ đa âm 了/的/得: pinyin-pro có thể đọc sai khi đứng riêng (VD 了 → liǎo) → cần danh sách ngoại lệ trong `validate:content` khi làm Chương 1–2.
-- M0 chưa đủ: `src/main.tsx` + `src/App.tsx` mới là khung tối thiểu để build pass (chưa import font); `public/icons/` trống và `scripts/generate-icons.ts` chưa có, trong khi `index.html` trỏ tới `favicon.svg`, `apple-touch-icon.png`.
+- Giao diện tạm luôn theo hệ thống (`applyTheme('system')` trong `main.tsx`); cài đặt sáng/tối lưu trong settings sẽ nối ở M3.
+- `/dev/gallery` chỉ có ở bản dev (`import.meta.env.DEV`), production không có route này.
 
 ## Decisions pending review
 Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong thì chuyển lên mục "Quyết định kỹ thuật đã chốt" hoặc xóa.
@@ -55,3 +56,6 @@ Các điểm mơ hồ đã tự chọn phương án, chờ duyệt. Duyệt xong
 - **Bài đầu Chương 1 = u01-l01 "Xin chào!"**, chép nguyên SPEC 12.4. SPEC 12.5 xếp bài Biến điệu vào Chương 0, không phải Chương 1 → bài Biến điệu vẫn chờ (dự kiến `u00-l05`, giờ đã có từ 你好/不客气 để dùng); chưa viết vì không được yêu cầu và Chương 0 đã duyệt.
 - **Tạo `hanzi.json` với đúng 1 chữ 好** (chép nguyên SPEC 12.3) vì u01-l01 có `hanziOfLesson: "好"`; `validate:content` giờ báo lỗi nếu `hanziOfLesson` chưa có trong hanzi.json.
 - **Chương u01**: tiêu đề "Chào hỏi" (bảng chương SPEC), trạm "Bắc Kinh" (SPEC Mục 7), `theme` `#E63946` (đỏ đèn lồng = `--primary`), `emoji` 🏮.
+- **Noto Sans SC nạp động sau lần vẽ đầu** (`import()` trong `main.tsx`) thay vì precache theo lát như mục "Quyết định đã chốt" — bản @fontsource đã chia 100+ lát theo `unicode-range`, trình duyệt tự tải lát cần; precache chọn lọc để M9 (PWA) quyết.
+- **E2E chạy cả 2 thiết bị trên Chromium** (iPhone 13 chỉ giả lập viewport, không cài WebKit) để nhẹ máy dev/CI.
+- **Icon PWA = Bao trên nền đỏ**, sinh từ chính component `Bao`; file PNG được commit (không gitignore như `public/hanzi`).
